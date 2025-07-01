@@ -221,7 +221,7 @@ const NavCards = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto rounded-lg text-white bg-gradient-to-b from-emerald-700 from-30% to-emerald-50 p-8 overflow-hidden">
+    <div className="relative w-full max-w-6xl mx-auto rounded-lg text-white bg-gradient-to-b from-emerald-700 from-40% to-emerald-50 p-8 overflow-hidden">
       {/* Network Background Canvas */}
       <canvas
         ref={canvasRef}
