@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@heroui/react";
+import { Image, ScrollShadow } from "@heroui/react";
 import { ArrowCircleRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import React from "react";
@@ -78,22 +78,59 @@ const HeroCarousel = () => {
                   ))}
                 </div>
               </div>
-              <div className="border-t ">
-                <div className="w-full overflow-auto flex flex-row gap-4">
-                  <div className="flex flex-row gap-2 max-w-lg">
-                    <Image
-                      src={"/images/hero-1.JPG"}
-                      width="100px"
-                      alt="banner"
-                      radius="none"
-                      className="object-cover object-[50%_20%] max-h-[700px]"
-                    />
-                    <p>
-                      Pengiriman Pemberian Makanan Tambahan (PMT) Lansia di
-                      Banjar Kaja, Desa Dalung oleh BUMDesa Dalung
-                    </p>
+              <div className="border-t pt-4">
+                <ScrollShadow className="w-full pb-4" orientation="horizontal">
+                  <div className="w-max flex flex-row gap-4">
+                    <div className="grow-0 flex flex-row gap-2 w-sm">
+                      <Image
+                        src={"/images/hero-1.JPG"}
+                        width="450px"
+                        alt="banner"
+                        className="aspect-video object-cover"
+                      />
+                      <p className="text-sm line-clamp-4">
+                        Pengiriman Pemberian Makanan Tambahan (PMT) Lansia di
+                        Banjar Kaja, Desa Dalung oleh BUMDesa Dalung
+                      </p>
+                    </div>
+                    <div className="grow-0 flex flex-row gap-2 w-sm">
+                      <Image
+                        src={"/images/berita-1.JPG"}
+                        width="450px"
+                        alt="banner"
+                        className="aspect-video object-cover"
+                      />
+                      <p className="text-sm line-clamp-4">
+                        Pengiriman Pemberian Makanan Tambahan (PMT) Lansia di
+                        Banjar Kaja, Desa Dalung oleh BUMDesa Dalung
+                      </p>
+                    </div>
+                    <div className="grow-0 flex flex-row gap-2 w-sm">
+                      <Image
+                        src={"/images/berita-2.JPG"}
+                        width="450px"
+                        alt="banner"
+                        className="aspect-video object-cover"
+                      />
+                      <p className="text-sm line-clamp-4">
+                        Berita tentang orang gila di desa kutamukti yang
+                        mengamuk dan menusuk warga di sana
+                      </p>
+                    </div>
+                    <div className="grow-0 flex flex-row gap-2 w-sm">
+                      <Image
+                        src={"/images/berita-3.JPG"}
+                        width="450px"
+                        alt="banner"
+                        className="aspect-video object-cover"
+                      />
+                      <p className="text-sm line-clamp-4">
+                        Pengiriman Pemberian Makanan Tambahan (PMT) Lansia di
+                        Banjar Kaja, Desa Dalung oleh BUMDesa Dalung
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </ScrollShadow>
               </div>
             </div>
           </div>
