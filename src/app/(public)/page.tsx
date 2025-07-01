@@ -1,4 +1,5 @@
 import HeroCarousel from "@/components/HeroCarousel";
+import MapOverview from "@/components/MapOverview";
 import NavCards from "@/components/NavCards";
 
 const HomePage = () => {
@@ -7,6 +8,9 @@ const HomePage = () => {
       <HeroCarousel />
       <div className="h-12" />
       <NavCards />
+      <div className="h-18" />
+      <MapOverview />
+      <div className="h-24" />
     </div>
   );
 };

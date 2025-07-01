@@ -20,8 +20,8 @@ const bannerData: HeroCarouselData[] = [
   },
   {
     image: "/images/hero-2.JPG",
-    title: "Selamat Datang di Kutamukti",
-    label: "Sambutan",
+    title: "Lihat Daftar Fasilitas dan Infrastruktur Desa Kutamukti",
+    label: "Fasilitas",
   },
   {
     image: "/images/hero-3.JPG",
