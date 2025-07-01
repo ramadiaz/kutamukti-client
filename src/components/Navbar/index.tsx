@@ -19,7 +19,7 @@ import { NavigationMenuDemo } from "./navMenu";
 
 const Navbar = () => {
   return (
-    <div className="w-full">
+    <div className="w-full sticky top-0 z-50 bg-background">
       <div className="px-2 py-6 border-b border-neutral-300">
         <div className="max-w-6xl mx-auto flex flex-row gap-8 justify-between items-center">
           <div className="flex flex-row gap-4 items-center justify-between">
@@ -49,7 +49,9 @@ const Navbar = () => {
               </DropdownTrigger>
               <DropdownMenu aria-label="Static Actions">
                 <DropdownItem key="id">Bahasa Indonesia</DropdownItem>
-                <DropdownItem key="comming soon" isDisabled>Coming Soon</DropdownItem>
+                <DropdownItem key="comming soon" isDisabled>
+                  Coming Soon
+                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>

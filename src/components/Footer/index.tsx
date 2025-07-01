@@ -155,14 +155,14 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="sm:flex  sm:flex-wrap sm:-mx-4 mt-6 pt-6 sm:mt-12 sm:pt-12 border-t justify-end">
+        {/* <div className="sm:flex  sm:flex-wrap sm:-mx-4 mt-6 pt-6 sm:mt-12 sm:pt-12 border-t justify-end">
           <p className="text-right text-sm opacity-80">
             @{new Date().getFullYear()} Powered by{" "}
             <Link href={`https://xanware.my.id`} target="_blank" className="hover:underline">
               Xanware
             </Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
