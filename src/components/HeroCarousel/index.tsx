@@ -7,7 +7,7 @@ import React from "react";
 import Slider from "react-slick";
 
 const HeroCarousel = () => {
-  const sliderRef = React.useRef(null);
+  const sliderRef = React.useRef<Slider>(null);
 
   type HeroCarouselData = {
     image: string;
@@ -67,7 +67,9 @@ const HeroCarousel = () => {
                     <div
                       key={j}
                       onClick={() => {
-                        sliderRef.current.slickGoTo(j);
+                        if (sliderRef.current) {
+                          sliderRef.current.slickGoTo(j);
+                        }
                       }}
                       className="flex border rounded-full w-10 h-10  items-center justify-center hover:bg-white/20 transition-all duration-300"
                     >
