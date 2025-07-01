@@ -145,6 +145,7 @@ const ImageBanner = ({ src }: { src: string }) => {
     <div className="w-full">
       <Image
         width="100%"
+        height={700}
         src={src}
         alt="banner"
         radius="none"
