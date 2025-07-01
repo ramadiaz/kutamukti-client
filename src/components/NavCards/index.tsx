@@ -32,10 +32,10 @@ const NavCards = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    
-    const maxNodes = 30; // Reduced for better performance
+
+    const maxNodes = 30;
     const maxDistance = 120;
     const nodeSpeed = 0.3;
 
@@ -56,8 +56,8 @@ const NavCards = () => {
           vx: (Math.random() - 0.5) * nodeSpeed,
           vy: (Math.random() - 0.5) * nodeSpeed,
           radius: Math.random() * 2 + 0.5,
-          opacity: Math.random() * 0.4 + 0.2, // Lower opacity for subtlety
-          pulsePhase: Math.random() * Math.PI * 2
+          opacity: Math.random() * 0.4 + 0.2,
+          pulsePhase: Math.random() * Math.PI * 2,
         });
       }
     };
@@ -81,15 +81,25 @@ const NavCards = () => {
       nodesRef.current.forEach((node: Node) => {
         const pulse = Math.sin(node.pulsePhase) * 0.3 + 0.7;
         const glowRadius = node.radius * (1 + pulse);
-        
+
         const gradient = ctx.createRadialGradient(
-          node.x, node.y, 0,
-          node.x, node.y, glowRadius * 2
+          node.x,
+          node.y,
+          0,
+          node.x,
+          node.y,
+          glowRadius * 2
         );
-        gradient.addColorStop(0, `rgba(255, 255, 255, ${node.opacity * pulse * 1})`); // Emerald color
-        gradient.addColorStop(0.5, `rgba(16, 185, 129, ${node.opacity * pulse * 1})`);
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-        
+        gradient.addColorStop(
+          0,
+          `rgba(255, 255, 255, ${node.opacity * pulse * 1})`
+        );
+        gradient.addColorStop(
+          0.5,
+          `rgba(255, 255, 255, ${node.opacity * pulse * 1})`
+        );
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(node.x, node.y, glowRadius * 2, 0, Math.PI * 2);
@@ -107,20 +117,22 @@ const NavCards = () => {
         for (let j = i + 1; j < nodesRef.current.length; j++) {
           const nodeA = nodesRef.current[i];
           const nodeB = nodesRef.current[j];
-          
+
           const distance = Math.sqrt(
-            Math.pow(nodeA.x - nodeB.x, 2) + 
-            Math.pow(nodeA.y - nodeB.y, 2)
+            Math.pow(nodeA.x - nodeB.x, 2) + Math.pow(nodeA.y - nodeB.y, 2)
           );
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 1; // Lower opacity
-            
+            const opacity = (1 - distance / maxDistance) * 1;
+
             const gradient = ctx.createLinearGradient(
-              nodeA.x, nodeA.y, nodeB.x, nodeB.y
+              nodeA.x,
+              nodeA.y,
+              nodeB.x,
+              nodeB.y
             );
-            gradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`); // Emerald color
-            gradient.addColorStop(0.5, `rgba(16, 185, 129, ${opacity * 1.2})`);
+            gradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`);
+            gradient.addColorStop(0.5, `rgba(255, 255, 255, ${opacity * 1.2})`);
             gradient.addColorStop(1, `rgba(255, 255, 255, ${opacity})`);
 
             ctx.strokeStyle = gradient;
@@ -146,7 +158,7 @@ const NavCards = () => {
         endY: nodeB.y,
         progress: 0,
         speed: 0.025,
-        life: 40
+        life: 40,
       };
 
       const animateFlow = (): void => {
@@ -155,10 +167,17 @@ const NavCards = () => {
         flowParticle.progress += flowParticle.speed;
         flowParticle.life--;
 
-        const x = flowParticle.startX + (flowParticle.endX - flowParticle.startX) * flowParticle.progress;
-        const y = flowParticle.startY + (flowParticle.endY - flowParticle.startY) * flowParticle.progress;
+        const x =
+          flowParticle.startX +
+          (flowParticle.endX - flowParticle.startX) * flowParticle.progress;
+        const y =
+          flowParticle.startY +
+          (flowParticle.endY - flowParticle.startY) * flowParticle.progress;
 
-        const alpha = (flowParticle.life / 40) * (1 - Math.abs(flowParticle.progress - 0.5) * 2) * 0.8;
+        const alpha =
+          (flowParticle.life / 40) *
+          (1 - Math.abs(flowParticle.progress - 0.5) * 2) *
+          0.8;
         ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
         ctx.beginPath();
         ctx.arc(x, y, 1.5, 0, Math.PI * 2);
@@ -174,11 +193,11 @@ const NavCards = () => {
 
     const animate = (): void => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       updateNodes();
       drawConnections();
       drawNodes();
-      
+
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -191,10 +210,10 @@ const NavCards = () => {
       createNodes();
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -209,7 +228,7 @@ const NavCards = () => {
         className="absolute top-0 left-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
       />
-      
+
       {/* Content */}
       <div className="relative z-10 pt-4">
         <h2 className="text-2xl font-semibold pb-10">
