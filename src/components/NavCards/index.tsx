@@ -1,27 +1,8 @@
 "use client";
+import { FlowParticle, Node } from "@/types/effects";
 import { ScrollShadow } from "@heroui/react";
 import { ArrowCircleRightIcon, FolderOpenIcon } from "@phosphor-icons/react";
 import { ReactNode, useEffect, useRef } from "react";
-
-interface Node {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  radius: number;
-  opacity: number;
-  pulsePhase: number;
-}
-
-interface FlowParticle {
-  startX: number;
-  startY: number;
-  endX: number;
-  endY: number;
-  progress: number;
-  speed: number;
-  life: number;
-}
 
 const NavCards = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
