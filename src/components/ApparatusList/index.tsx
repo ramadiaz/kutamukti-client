@@ -30,7 +30,7 @@ const ApparatusList = () => {
           Daftar Pegawai Desa Kutamukti
         </h1>
         <p className="opacity-90 text-sm">
-          Berikut adalah daftar tokoh desa kutamukti yang menjabat mulai tahun
+          Berikut adalah daftar tokoh Desa Kutamukti yang menjabat mulai tahun
           2024 sampai sekarang:
         </p>
       </div>

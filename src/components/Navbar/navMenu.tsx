@@ -42,6 +42,12 @@ const profileDesa: { title: string; href: string; description: string }[] = [
     description:
       "For sighted users to preview content available behind a link.",
   },
+  {
+    title: "Daftar Perangkat Desa",
+    href: "/profile/apparatus",
+    description:
+      "Daftar tokoh Desa Kutamukti yang menjabat mulai tahun 2024 sampai sekarang",
+  },
 ];
 
 export function NavigationMenuDemo() {
@@ -51,7 +57,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/">
-              <HouseIcon size={32} color="#008FD7" />
+              <HouseIcon size={32} color="#047857"  />
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
