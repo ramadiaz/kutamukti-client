@@ -1,5 +1,6 @@
 import { ApparatusType } from "@/types/apparatus";
 import { Image } from "@heroui/react";
+import { ArrowCircleRightIcon } from "@phosphor-icons/react";
 import React from "react";
 
 const ApparatusCard = ({ data }: { data: ApparatusType }) => {
@@ -17,9 +18,11 @@ const ApparatusCard = ({ data }: { data: ApparatusType }) => {
         <p>{data.role}</p>
         <div className="h-16" />
         <p className="text-emerald-700">Masa Kerja: {data.periode}</p>
-        <p>
-            {data.desc}
-        </p>
+        <p className=" line-clamp-4">{data.desc}</p>
+        <div className="flex flex-row items-center text-emerald-700 mt-4 gap-2 cursor-pointer">
+          <ArrowCircleRightIcon size={28} />
+          <p>Selengkapnya</p>
+        </div>
       </div>
     </div>
   );
