@@ -48,6 +48,38 @@ const profileDesa: { title: string; href: string; description: string }[] = [
     description:
       "Daftar tokoh Desa Kutamukti yang menjabat mulai tahun 2024 sampai sekarang",
   },
+  {
+    title: "Sejarah Desa",
+    href: "/profile/history",
+    description:
+      "Sejarah singkat desa kutamukti mulai tahun 1966 sampai sekarang",
+  },
+];
+
+const dataDesa: { title: string; href: string; description: string }[] = [
+  {
+    title: "Statistik Penduduk",
+    href: "/datas/population",
+    description: "A modal dialog that interrupts the user with important ",
+  },
+  {
+    title: "Sarana dan Prasarana",
+    href: "/datas/facilities-infrastructure",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "SDGS",
+    href: "/datas/sdgs",
+    description:
+      "Daftar tokoh Desa Kutamukti yang menjabat mulai tahun 2024 sampai sekarang",
+  },
+  {
+    title: "IDM",
+    href: "/status/idm",
+    description:
+      "Informasi mengenai Indeks Desa Membangun (IDM) Desa Kutamukti",
+  },
 ];
 
 export function NavigationMenuDemo() {
@@ -57,7 +89,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/">
-              <HouseIcon size={32} color="#047857"  />
+              <HouseIcon size={32} color="#047857" />
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -85,7 +117,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
+              {dataDesa.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
@@ -98,40 +130,14 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal uppercase">
-            Status Desa
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <NavigationMenuLink className="font-normal uppercase">
+            Peta Interaktif Desa
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal uppercase">
-            Informasi Publik
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <NavigationMenuLink className="font-normal uppercase">
+            Berita
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-normal uppercase">
