@@ -76,6 +76,20 @@ const dataDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const serviceDesa: { title: string; href: string; description: string }[] = [
+  {
+    title: "Laporan Pengaduan",
+    href: "/service/complaint",
+    description: "A modal dialog that interrupts the user with important ",
+  },
+  {
+    title: "Agenda Desa",
+    href: "/service/schedule",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+];
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu className="" viewport={false}>
@@ -85,6 +99,11 @@ export function NavigationMenuDemo() {
             <Link href="/">
               <HouseIcon size={32} color="#047857" />
             </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink className="font-normal uppercase">
+            Berita
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -129,17 +148,30 @@ export function NavigationMenuDemo() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="font-normal uppercase">
-            Berita
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
           <NavigationMenuTrigger className="font-normal uppercase">
             Produk Desa
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="font-normal uppercase">
+            Layanan
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              {serviceDesa.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
