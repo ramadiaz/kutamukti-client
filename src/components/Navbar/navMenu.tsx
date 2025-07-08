@@ -31,7 +31,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 const profileDesa: { title: string; href: string; description: string }[] = [
   {
-    title: "Tentang Kami",
+    title: "Tentang Kami dan Visi Misi",
     href: "/profile/about",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
