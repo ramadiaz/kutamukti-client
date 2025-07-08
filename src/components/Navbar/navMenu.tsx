@@ -52,7 +52,7 @@ const profileDesa: { title: string; href: string; description: string }[] = [
 
 const dataDesa: { title: string; href: string; description: string }[] = [
   {
-    title: "Statistik Penduduk",
+    title: "Jumlah Penduduk dan APB",
     href: "/datas/population",
     description: "A modal dialog that interrupts the user with important ",
   },
@@ -70,7 +70,7 @@ const dataDesa: { title: string; href: string; description: string }[] = [
   },
   {
     title: "IDM",
-    href: "/status/idm",
+    href: "/datas/idm",
     description:
       "Informasi mengenai Indeks Desa Membangun (IDM) Desa Kutamukti",
   },
