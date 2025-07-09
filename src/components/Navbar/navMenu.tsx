@@ -102,7 +102,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="font-normal uppercase">
+          <NavigationMenuLink href="/news" className="font-normal uppercase">
             Berita
           </NavigationMenuLink>
         </NavigationMenuItem>
