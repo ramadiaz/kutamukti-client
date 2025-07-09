@@ -123,7 +123,7 @@ const Footer = () => {
               Jawa Barat, Indonesia
             </address>
           </div>
-          <div className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
+          <Link href={`/created-by`} className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0 cursor-pointer">
             <h6 className="font-bold mb-2">Dibuat oleh</h6>
             <div className="flex flex-row items-center justify-start gap-2">
               <Image
@@ -138,7 +138,7 @@ const Footer = () => {
                 Kelompok 30
               </p>
             </div>
-          </div>
+          </Link>
           {/* <div className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
             <h6 className="font-bold mb-2">Free Resources</h6>
             <p className="mb-4 text-sm">
