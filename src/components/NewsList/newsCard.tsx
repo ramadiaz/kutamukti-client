@@ -14,6 +14,7 @@ const NewsCard = ({ data }: { data: News }) => {
                 width={350}
                 height={180}
                 radius='none'
+                referrerPolicy='no-referrer'
                 alt={data.title}
                 className='object-cover'
             />
