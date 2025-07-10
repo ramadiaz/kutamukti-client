@@ -43,7 +43,7 @@ const NewsRead = ({ data }: { data: News }) => {
                     src={data.thumbnail_url}
                     width="100%"
                     height={500}
-                    radius='none'
+                    radius='sm'
                     alt={data.title}
                     className='object-cover'
                     referrerPolicy='no-referrer'
