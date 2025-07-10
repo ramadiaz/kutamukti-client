@@ -7,10 +7,12 @@ const PageHeader = ({
   title,
   description,
   breadCrumbs = [],
+  isTitleOnly = false
 }: {
   title: string;
-  description: string;
+  description?: string;
   breadCrumbs: string[];
+  isTitleOnly?: boolean;
 }) => {
   return (
     <div className="relative w-full h-max">
@@ -18,7 +20,7 @@ const PageHeader = ({
         src={"/images/hero-1.JPG"}
         alt="logo"
         width="100%"
-        height={300}
+        height={isTitleOnly ? 200 : 300}
         radius="none"
         className="object-[50%_37%] object-cover brightness-80"
       />

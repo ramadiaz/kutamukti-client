@@ -1,3 +1,5 @@
+'use client'
+
 import { News } from '@/types/news'
 import { Button, Image } from '@heroui/react'
 import { ArrowRightIcon } from '@phosphor-icons/react'
