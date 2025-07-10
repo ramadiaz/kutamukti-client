@@ -12,92 +12,92 @@ type ProfileType = {
 const ProfileData: ProfileType[] = [
     {
         name: "Mulky Ismail Ramadhan",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/mulki.jpg",
         role: "Ketua"
     },
     {
         name: "Farah Nur Aulia",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/farah.jpg",
         role: "Wakil Ketua"
     },
     {
         name: "Tegar Permata Sasmita ",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/tegar.jpg",
         role: "Bendahara"
     },
     {
         name: "Chaisya Wilver",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/kesa.jpg",
         role: "Sekretaris"
     },
     {
         name: "Sasqia Ivo Marinda",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/saski.jpg",
         role: "Sekretaris"
     },
     {
         name: "Dhea Carisa Ardelia",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/dea.jpg",
         role: "Div. Acara"
     },
     {
         name: "Michael Franky",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/prengki.jpg",
         role: "Div. Acara"
     },
     {
         name: "Mega Pramesti",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/mega.jpg",
         role: "Div. Acara"
     },
     {
         name: "Eunike Louisia Matondang",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/luis.jpg",
         role: "Div. HUMAS"
     },
     {
         name: "Rama Diaz",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/rama.jpg",
         role: "Div. HUMAS"
     },
     {
         name: "Nur Hasanah Mas'ud",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/nur.jpg",
         role: "Div. HUMAS"
     },
     {
         name: "Sopian Syauri",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/sopi.jpg",
         role: "Div. PDD "
     },
     {
         name: "Ananta Ziaurohman",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/nanta.jpg",
         role: "Div. PDD "
     },
     {
         name: "Naina Jazzyntia Divani ",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/naina.jpg",
         role: "Div. PDD"
     },
     {
         name: "Muhammad Ageng Nugroho",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/ageng.jpg",
         role: "Div. LOGSUM"
     },
     {
         name: "Mochamad Pandu Pribadi",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/moka.jpg",
         role: "Div. LOGSUM"
     },
     {
         name: "Khansa Athaya",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/tayo.jpg",
         role: "Div. LOGSUM"
     },
     {
         name: "Dina Herlina",
-        image: "/kkn/mulky.jpeg",
+        image: "/kkn/dina.jpg",
         role: "Div. LOGSUM"
     },
 ]
@@ -128,7 +128,7 @@ const ProfileCard = ({ data }: { data: ProfileType }) => {
             <CardBody className="overflow-visible py-2">
                 <Image
                     alt="Card background"
-                    className="object-cover rounded-xl"
+                    className="object-cover object-[50%_25%] rounded-xl"
                     src={data.image}
                     width={270}
                     height={200}
