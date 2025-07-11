@@ -29,6 +29,21 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const galleryDesa: { title: string; href: string; description: string }[] = [
+  {
+    title: "Galeri Foto",
+    href: "/gallery/images",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Galeri Video",
+    href: "/gallery/videos",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+];
+
 const profileDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Tentang Kami dan Visi Misi",
@@ -154,6 +169,24 @@ export function NavigationMenuDemo() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="font-normal uppercase">
+            Galeri
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              {galleryDesa.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}

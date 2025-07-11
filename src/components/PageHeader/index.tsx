@@ -27,7 +27,7 @@ const PageHeader = ({
       <div className="absolute inset-0 z-10 py-6 text-white bg-gradient-to-b from-emerald-700 to-emerald-700/0">
         <div className="w-full max-w-6xl mx-auto">
           <Breadcrumbs>
-            <BreadcrumbItem key={`root`} color="secondary">Home</BreadcrumbItem>
+            <BreadcrumbItem key={`root`} href="/" color="secondary">Home</BreadcrumbItem>
             {breadCrumbs.map((item, i) => (
               <BreadcrumbItem key={i} color="secondary">{item}</BreadcrumbItem>
             ))}
