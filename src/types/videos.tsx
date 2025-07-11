@@ -1,7 +1,8 @@
 export type VideoTypes = {
-  thumbnail: string;
-  title: string;
-  description: string;
-  url: string;
-  label: string;
+  uuid: string
+  title: string
+  description: string
+  youtube_url: string
+  youtube_id: string
+  thumbnail_url: string
 };
