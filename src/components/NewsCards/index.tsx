@@ -1,19 +1,23 @@
 "use client";
-import { NewsTypes } from "@/types/news";
-import { Card, CardBody, CardHeader, Image } from "@heroui/react";
+import { ENV } from "@/lib/environment";
+import { News } from "@/types/news";
+import { Card, CardBody, CardFooter, Image } from "@heroui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const NewsCards = () => {
-  const [news, setVideos] = useState<NewsTypes[]>([]);
+  const [news, setVideos] = useState<News[]>([]);
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/datas/news/news-list.json");
-      const data = await response.json();
-      if (data) {
-        setVideos(data);
-      }
+      const res = await fetch(ENV.BASE_API + `/news/getall`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      const data = await res.json();
+      setVideos(data.body);
     } catch (error) {
       console.error("Error fetching data:", error);
       return [];
@@ -30,23 +34,25 @@ const NewsCards = () => {
         Realisasi Program Desa Kutamukti
       </h1>
       <div className="flex flex-row gap-4 items-start justify-between w-full">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 basis-3/4">
           {news.map((item, i) => {
             return (
-              <Card key={i} className="py-4" as={Link} href={item.url}>
-                <CardBody className="overflow-visible py-2">
+              <Card key={i} className="py-4" as={Link} href={`/news/` + item.slug}>
+                <CardBody className="overflow-visible pt-0">
                   <Image
                     alt="Card background"
-                    className="object-cover rounded-xl"
-                    src={item.thumbnail}
+                    className="object-cover rounded-xl aspect-video"
+                    src={item.thumbnail_url}
                     width={270}
                   />
+                  <div className="pt-2 flex-col items-start">
+                    <h4 className="font-bold text-large line-clamp-2">{item.title}</h4>
+                    <small className="text-default-500 line-clamp-4">{item.raw_text}</small>
+                  </div>
                 </CardBody>
-                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <h4 className="font-bold text-large">{item.title}</h4>
-                  <small className="text-default-500">{item.description}</small>
-                  <p className="text-tiny uppercase font-bold">{item.label}</p>
-                </CardHeader>
+                <CardFooter>
+                  <p className="text-tiny uppercase font-bold">News</p>
+                </CardFooter>
               </Card>
             );
           })}

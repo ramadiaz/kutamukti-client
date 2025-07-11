@@ -8,10 +8,12 @@ import Quill from 'quill'
 import React, { useEffect, useRef } from 'react'
 import TextEditor from '../TextEditor'
 import ShareModal from '../ShareModal'
+import { useRouter } from 'next/navigation'
 
 const NewsRead = ({ data }: { data: News }) => {
     const shareDisclosure = useDisclosure()
     const quillRef = useRef<Quill>(null)
+    const router = useRouter()
 
     useEffect(() => {
         if (quillRef.current && data.content) {
@@ -56,7 +58,7 @@ const NewsRead = ({ data }: { data: News }) => {
                 <TextEditor ref={quillRef} readOnly />
             </div>
             <div className='w-full flex flex-row justify-between gap-4 mt-8'>
-                <Button color='success' className='text-white bg-emerald-600 text-sm' size='sm' radius='full'>
+                <Button color='success' className='text-white bg-emerald-600 text-sm' onPress={() => router.back()}>
                     <div className='flex flex-row gap-2 items-center justify-center'>
                         <ArrowLeftIcon size={20} />
                         <p>
@@ -64,7 +66,7 @@ const NewsRead = ({ data }: { data: News }) => {
                         </p>
                     </div>
                 </Button>
-                <Button color='success' className='text-white bg-emerald-600 text-sm' size='sm' radius='full' onPress={shareDisclosure.onOpen}>
+                <Button color='success' className='text-white bg-emerald-600 text-sm' onPress={shareDisclosure.onOpen}>
                     <div className='flex flex-row gap-2 items-center justify-center'>
                         <ShareFatIcon size={18} />
                         <p>
