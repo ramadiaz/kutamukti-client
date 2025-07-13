@@ -15,92 +15,92 @@ const SDGSData: SDGSType[] = [
     {
         image: "/sdgs/1.png",
         aspect: "Desa Tanpa Kemiskinan",
-        score: 33.47
+        score: 54.80
     },
     {
         image: "/sdgs/2.png",
         aspect: "Desa Tanpa Kelaparan",
-        score: 33.47
+        score: 50.00
     },
     {
         image: "/sdgs/3.png",
         aspect: "Sehat dan Sejahtera",
-        score: 33.47
+        score: 55.85
     },
     {
         image: "/sdgs/4.png",
         aspect: "Pendidikan Desa Berkualitas",
-        score: 33.47
+        score: 34.16
     },
     {
         image: "/sdgs/5.png",
         aspect: "Keterlibatan Perempuan Desa",
-        score: 33.47
+        score: 47.37
     },
     {
         image: "/sdgs/6.png",
         aspect: "Desa Layak Air Bersih dan Sanitasi",
-        score: 33.47
+        score: 69.20
     },
     {
         image: "/sdgs/7.png",
         aspect: "Desa Bersinergi Bersih dan Terbarukan",
-        score: 33.47
+        score: 99.84
     },
     {
         image: "/sdgs/8.png",
         aspect: "Pertumbuhan Ekonomi Desa Merata",
-        score: 33.47
+        score: 41.30
     },
     {
         image: "/sdgs/9.png",
         aspect: "Infrastruktur dan Inovasi Desa",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/10.png",
         aspect: "Desa Tanpa Kesenjangan",
-        score: 33.47
+        score: 48.20
     },
     {
         image: "/sdgs/11.png",
         aspect: "Kawasan Pemukiman Desa Aman & Nyaman",
-        score: 33.47
+        score: 62.48
     },
     {
         image: "/sdgs/12.png",
         aspect: "Konsumsi & Produksi Desa Sadar Lingkungan",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/13.png",
         aspect: "Desa Tanggap Perubahan Iklim",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/14.png",
         aspect: "Desa Peduli Lingkungan Laut",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/15.png",
         aspect: "Desa Peduli Lingkungan Darat",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/16.png",
         aspect: "Desa Damai Berkeadilan",
-        score: 33.47
+        score: 73.17
     },
     {
         image: "/sdgs/17.png",
         aspect: "Kemitraan Untuk Pembangunan Desa",
-        score: 33.47
+        score: 0.00
     },
     {
         image: "/sdgs/18.png",
         aspect: "Kelembagaan Desa Dinamis & Budaya Desa Adaptif",
-        score: 33.47
+        score: 19.67
     },
 ]
 
@@ -136,7 +136,7 @@ const SDGS = () => {
                                 Skor SDGs Kutamukti
                             </p>
                             <p className='basis-1/3 font-semibold text-2xl text-center'>
-                                44.63
+                                36.45
                             </p>
                         </div>
                     </div>
