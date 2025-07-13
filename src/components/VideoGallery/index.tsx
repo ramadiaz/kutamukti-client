@@ -31,7 +31,7 @@ const VideoGallery = () => {
     }, [])
 
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto py-16">
             <div className="flex flex-wrap gap-4">
                 {
                     videoData.map((item, i) => {
@@ -48,7 +48,7 @@ const VideoGallery = () => {
 
 const VideoCard = ({ data }: { data: VideoTypes }) => {
     return (
-        <Card className="py-4" as={Link} href={`/gallery/videos/` + data.uuid}>
+        <Card className="py-4 w-[300px]" as={Link} href={`/gallery/videos/` + data.uuid}>
             <CardBody className="overflow-visible pt-0">
                 <div className="relative">
                     <Image
