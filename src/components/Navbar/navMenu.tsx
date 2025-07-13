@@ -158,7 +158,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="font-normal uppercase">
+          <NavigationMenuLink href="/maps" className="font-normal uppercase">
             Peta Interaktif Desa
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -217,7 +217,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="font-normal uppercase">
+          <NavigationMenuLink href="mailto:kutamukti.pemdes.karawangkab@gmail.com" target="_blank" className="font-normal uppercase">
             Hubungi Kami
           </NavigationMenuLink>
         </NavigationMenuItem>
