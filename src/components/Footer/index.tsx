@@ -1,4 +1,5 @@
 import { Image } from "@heroui/react";
+import { EnvelopeIcon, FacebookLogoIcon, InstagramLogoIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import React from "react";
 
@@ -88,24 +89,27 @@ const Footer = () => {
             <h5 className="text-xl font-bold mb-6 sm:text-center xl:text-left">
               Stay connected
             </h5>
-            <div className="flex sm:justify-center xl:justify-start">
+            <div className="flex sm:justify-center xl:justify-start gap-1">
               <Link
-                href=""
-                className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600"
+                target="_blank"
+                href="https://web.facebook.com/profile.php?id=61577991512954"
+                className="p-1 rounded-full text-center text-white bg-blue-700 hover:bg-blue-600 hover:border-blue-600"
               >
-                <i className="fab fa-facebook"></i>
+                <FacebookLogoIcon size={32} />
               </Link>
               <Link
-                href=""
-                className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"
+                target="_blank"
+                href="https://www.instagram.com/desakutamukti.kutawaluya"
+                className="p-1 rounded-full text-center text-white bg-pink-700 hover:bg-pink-600 hover:border-pink-600"
               >
-                <i className="fab fa-twitter"></i>
+                <InstagramLogoIcon size={32} />
               </Link>
               <Link
-                href=""
-                className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-red-600 hover:border-red-600"
+                target="_blank"
+                href="mailto:kutamukti.pemdes.karawangkab@gmail.com"
+                className="p-1 rounded-full text-center text-white bg-red-700 hover:bg-red-600 hover:border-red-600"
               >
-                <i className="fab fa-google-plus-g"></i>
+                <EnvelopeIcon size={32} />
               </Link>
             </div>
           </div>
@@ -148,8 +152,9 @@ const Footer = () => {
           </div> */}
           <div className="px-4 md:w-1/4 md:ml-auto mt-6 sm:mt-4 md:mt-0">
             <Link
-              href={`/contact-us`}
-              className="px-4 py-2 bg-primary/80 hover:bg-primary transition-all duration-300 rounded text-white"
+              target="_blank"
+              href={`mailto:kutamukti.pemdes.karawangkab@gmail.com`}
+              className="px-4 py-2 bg-emerald-700 hover:bg-emerald-700/80 transition-all duration-300 rounded text-white"
             >
               Hubungi Kami
             </Link>

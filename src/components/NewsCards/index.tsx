@@ -45,6 +45,7 @@ const NewsCards = () => {
                     className="object-cover rounded-xl aspect-video"
                     src={item.thumbnail_url}
                     width={270}
+                    referrerPolicy="no-referrer"
                   />
                   <div className="pt-2 flex-col items-start">
                     <h4 className="font-bold text-large line-clamp-2">{item.title}</h4>
