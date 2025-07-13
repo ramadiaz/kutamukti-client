@@ -2,6 +2,7 @@
 import { ENV } from "@/lib/environment";
 import { News } from "@/types/news";
 import { Card, CardBody, CardFooter, Image } from "@heroui/react";
+import { CaretDoubleRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -35,7 +36,7 @@ const NewsCards = () => {
       </h1>
       <div className="flex flex-row gap-4 items-start justify-between w-full">
         <div className="grid grid-cols-3 gap-4 basis-3/4">
-          {news.map((item, i) => {
+          {news.slice(0, 6).map((item, i) => {
             return (
               <Card key={i} className="py-4" as={Link} href={`/news/` + item.slug}>
                 <CardBody className="overflow-visible pt-0">
@@ -57,7 +58,13 @@ const NewsCards = () => {
             );
           })}
         </div>
-        <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 flex items-center justify-center rounded-xl">
+        <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 flex items-center justify-center rounded-xl relative">
+          <Link href={`/news`} className="absolute bottom-4 right-4 flex flex-row items-center text-white">
+            <p className="text-sm">
+              Selengkapnya
+            </p>
+            <CaretDoubleRightIcon size={16} weight="bold" />
+          </Link>
           <div className="text-white h-max">
             <p className="text-4xl font-semibold text-center">
               {news.length} Berita

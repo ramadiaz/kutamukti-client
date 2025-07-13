@@ -46,7 +46,7 @@ const VideoGallery = () => {
     )
 }
 
-const VideoCard = ({ data }: { data: VideoTypes }) => {
+export const VideoCard = ({ data }: { data: VideoTypes }) => {
     return (
         <Card className="py-4 w-[300px]" as={Link} href={`/gallery/videos/` + data.uuid}>
             <CardBody className="overflow-visible pt-0">

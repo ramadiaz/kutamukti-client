@@ -3,6 +3,7 @@
 import { ENV } from "@/lib/environment";
 import { VideoTypes } from "@/types/videos";
 import { Card, CardBody, CardFooter, Image } from "@heroui/react";
+import { CaretDoubleRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -36,7 +37,7 @@ const VideoCards = () => {
       </h1>
       <div className="flex flex-row gap-4 items-start justify-between w-full">
         <div className="grid grid-cols-3 gap-4 basis-3/4">
-          {videos.map((item, i) => {
+          {videos.slice(0, 6).map((item, i) => {
             return (
               <Card key={i} className="py-4" as={Link} href={`/gallery/videos/` + item.uuid}>
                 <CardBody className="overflow-visible pt-0">
@@ -58,7 +59,13 @@ const VideoCards = () => {
             );
           })}
         </div>
-        <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 flex items-center justify-center rounded-xl">
+        <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 flex items-center justify-center rounded-xl relative">
+          <Link href={`/gallery/videos`}  className="absolute bottom-4 right-4 flex flex-row items-center text-white">
+            <p className="text-sm">
+            Selengkapnya
+            </p>
+            <CaretDoubleRightIcon size={16} weight="bold" />
+          </Link>
           <div className="text-white h-max">
             <p className="text-4xl font-semibold text-center">
               {videos.length} Video
