@@ -15,7 +15,7 @@ const IDMData: IDMType[] = [
     {
         image: "/idm/inspection.png",
         title: "Skor IDM 2025",
-        score: "0.815"
+        score: "0.703"
     },
     {
         image: "/idm/error.png",
@@ -25,32 +25,32 @@ const IDMData: IDMType[] = [
     {
         image: "/idm/cupid.png",
         title: "Target Status",
-        score: "Mandiri"
+        score: "Maju"
     },
     {
         image: "/idm/minimize.png",
         title: "Skor Minimal",
-        score: "0.815"
+        score: "0.707"
     },
     {
         image: "/idm/favorite.png",
         title: "Penambahan",
-        score: "0.001"
+        score: "0.004"
     },
     {
         image: "/idm/volunteer.png",
         title: "Skor IKS",
-        score: "0.896"
+        score: "0.777"
     },
     {
         image: "/idm/profit.png",
         title: "Skor IKE",
-        score: "0.666"
+        score: "0.733"
     },
     {
         image: "/idm/tree-planting.png",
         title: "Skor IKL",
-        score: "0.915"
+        score: "0.6"
     },
 ]
 
@@ -86,7 +86,7 @@ const IDM = () => {
                                 className='aspect-square w-[100px] h-[100px] object-cover'
                             />
                             <p className='font-semibold text-center uppercase'>
-                                INDEX <br />  KETAHANAN NASIONAL
+                                INDEX <br />  KETAHANAN SOSIAL
                             </p>
                             <p className='text-xs text-center'>Pendidikan Kesehatan Modal Sosial Pemukiman</p>
                         </div>
@@ -112,7 +112,7 @@ const IDM = () => {
                                 className='aspect-square w-[100px] h-[100px] object-cover'
                             />
                             <p className='font-semibold text-center uppercase'>
-                                INDEX <br /> KETAHANAN EKONOMI
+                                INDEX <br /> KETAHANAN EKOLOGI
                             </p>
                             <p className='text-xs text-center'>Kualitas Lingkungan Bencana Alam Tanggap Bencana</p>
                         </div>
