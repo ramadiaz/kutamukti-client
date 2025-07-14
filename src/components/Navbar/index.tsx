@@ -20,7 +20,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="w-full sticky top-0 z-50 bg-background">
+    <div className="w-full sticky top-0 z-999 bg-background">
       <div className="px-2 py-6 border-b border-neutral-300">
         <div className="max-w-6xl mx-auto flex flex-row gap-8 justify-between items-center">
           <div className="flex flex-row gap-4 items-center justify-between">
