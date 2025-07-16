@@ -24,7 +24,7 @@ const ApparatusList = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl px-2 mx-auto">
       <div className="">
         <h1 className="uppercase font-semibold text-2xl">
           Daftar Pegawai Desa Kutamukti

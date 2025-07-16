@@ -13,7 +13,7 @@ const VideoPlayer = ({ data }: { data: VideoTypes }) => {
     const router = useRouter()
 
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl px-2 mx-auto'>
             <LiteYouTubeEmbed
                 id={data.youtube_id}
                 title={data.title}

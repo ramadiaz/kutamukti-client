@@ -2,7 +2,7 @@ import React from 'react'
 
 const VissionMission = () => {
     return (
-        <div className='max-w-6xl mx-auto py-4 space-y-4'>
+        <div className='max-w-6xl px-2 mx-auto py-4 space-y-4'>
             <h1 className='text-2xl font-semibold'>Visi & Misi</h1>
             <div className='p-8 rounded-lg bg-gradient-to-br from-neutral-200 to-white space-y-2'>
                 <h2 className='text-center text-xl font-semibold'>Visi</h2>

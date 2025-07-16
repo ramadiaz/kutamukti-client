@@ -5,7 +5,7 @@ import React from 'react'
 
 const ApparatusChart = () => {
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl px-2 mx-auto'>
             <div className="mb-4">
                 <h1 className="uppercase font-semibold text-2xl">
                     Bagan Pengurus Desa Kutamukti

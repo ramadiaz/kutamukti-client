@@ -62,7 +62,7 @@ const ImageOverlay = ({
 }) => {
   return (
     <div className="absolute inset-0 text-white bg-gradient-to-t from-emerald-600 to-50% to-transparent z-10 p-4">
-      <div className="max-w-6xl mx-auto w-full flex flex-col gap-5 items-between justify-end h-full">
+      <div className="max-w-6xl px-2 mx-auto w-full flex flex-col gap-5 items-between justify-end h-full">
         <div className="flex flex-row w-full gap-2 justify-between items-end">
           <div className="space-y-2">
             <div className="bg-orange-500 uppercase font-semibold text-sm px-2 py-1 rounded-sm w-max">

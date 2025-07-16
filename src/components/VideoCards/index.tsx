@@ -31,7 +31,7 @@ const VideoCards = () => {
   }, []);
 
   return (
-    <div className=" max-w-6xl mx-auto">
+    <div className=" max-w-6xl px-2 mx-auto">
       <h1 className="uppercase font-semibold text-2xl pb-8">
         Realisasi Program Desa Kutamukti
       </h1>

@@ -25,7 +25,7 @@ const PageHeader = ({
         className="object-[50%_37%] object-cover brightness-80"
       />
       <div className="absolute inset-0 z-10 py-6 text-white bg-gradient-to-b from-emerald-700 to-emerald-700/0">
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full max-w-6xl px-2 mx-auto">
           <Breadcrumbs>
             <BreadcrumbItem key={`root`} href="/" color="secondary">Home</BreadcrumbItem>
             {breadCrumbs.map((item, i) => (

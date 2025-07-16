@@ -3,7 +3,7 @@ import HistoryTimeLine from './HistoryTimeLine'
 
 const History = () => {
     return (
-        <div className='max-w-6xl mx-auto py-16'>
+        <div className='max-w-6xl px-2 mx-auto py-16'>
             <div className='flex flex-row gap-6'>
                 <div className='basis-1/3'>
                     <h1 className='text-emerald-700'>

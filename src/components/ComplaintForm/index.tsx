@@ -44,7 +44,7 @@ const ComplaintForm = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl w-full py-14">
+    <div className="mx-auto max-w-6xl px-2 w-full py-14">
       <div className="space-y-2">
         <h1 className="font-semibold text-2xl">
           Form Pengaduan

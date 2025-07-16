@@ -7,7 +7,7 @@ import NetworkBackground from "../backgrounds/network-background";
 
 const NavCards = () => {
   return (
-    <div className="relative w-full max-w-6xl mx-auto rounded-lg text-white bg-gradient-to-b from-emerald-700 from-40% to-emerald-50 p-8 overflow-hidden">
+    <div className="relative w-full max-w-6xl px-2 mx-auto rounded-lg text-white bg-gradient-to-b from-emerald-700 from-40% to-emerald-50 p-8 overflow-hidden">
       <NetworkBackground zIndex={10} />
       <div className="relative z-10 pt-4">
         <h2 className="text-2xl font-semibold pb-10">

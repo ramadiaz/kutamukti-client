@@ -28,7 +28,7 @@ const NewsRead = ({ data }: { data: News }) => {
     }, [data])
 
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl px-2 mx-auto'>
             <div className='w-full flex flex-row gap-8 items-center justify-between py-2'>
                 <div className='flex flex-row gap-2 items-center'>
                     <ClockIcon size={20} />

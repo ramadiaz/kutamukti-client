@@ -103,7 +103,7 @@ const SaranaKesehatanData: FacInfType[] = [
 
 const FacInf = () => {
     return (
-        <div className='mx-auto max-w-6xl py-16'>
+        <div className='mx-auto max-w-6xl px-2 py-16'>
             <div>
                 <h1 className='text-2xl font-semibold'>Sarana dan Prasarana</h1>
                 <p className='text-sm'>

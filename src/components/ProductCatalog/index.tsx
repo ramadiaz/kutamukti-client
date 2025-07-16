@@ -41,7 +41,7 @@ const ProductCatalog = () => {
   }, [keyword]);
 
   return (
-    <div className="max-w-6xl mx-auto space-y-4">
+    <div className="max-w-6xl px-2 mx-auto space-y-4">
       <div>
         <h1 className="uppercase font-semibold text-center text-2xl text-emerald-700">
           Beli Dari Desa

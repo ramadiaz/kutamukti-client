@@ -5,7 +5,7 @@ import React from 'react'
 
 const Population = () => {
     return (
-        <div className='max-w-6xl mx-auto py-16'>
+        <div className='max-w-6xl px-2 mx-auto py-16'>
             <div className='w-full flex flex-row gap-4 items-start'>
                 <div className='basis-1/2 space-y-4'>
                     <h1 className='text-xl text-emerald-700'>

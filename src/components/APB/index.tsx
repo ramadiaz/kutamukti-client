@@ -4,7 +4,7 @@ import { Image } from "@heroui/react"
 
 const APB = () => {
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl px-2 mx-auto">
             <div className="w-full flex flex-row gap-6">
                 <div className='basis-1/3 flex justify-end'>
                     <Image

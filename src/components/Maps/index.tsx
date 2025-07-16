@@ -7,7 +7,7 @@ const MapRender = dynamic(() => import('./mapRender'), {
 
 const Maps = () => {
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl px-2 mx-auto'>
             <MapRender />
         </div>
     )

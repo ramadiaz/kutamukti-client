@@ -106,7 +106,7 @@ const SDGSData: SDGSType[] = [
 
 const SDGS = () => {
     return (
-        <div className='mx-auto max-w-6xl py-16'>
+        <div className='mx-auto max-w-6xl px-2 py-16'>
             <div>
                 <h1 className='uppercase font-semibold text-2xl text-center'>Infografis Desa Kutamukti</h1>
             </div>

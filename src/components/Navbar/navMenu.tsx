@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { HouseIcon } from "@phosphor-icons/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 
 const galleryDesa: { title: string; href: string; description: string }[] = [
   {
@@ -222,6 +223,82 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
+  );
+}
+
+export function MobileNavMenu() {
+  return (
+    <div className="flex flex-col gap-2">
+      <Link href="/" className="py-2 text-base font-semibold text-emerald-700">
+        Beranda
+      </Link>
+      <Link href="/news" className="py-2 text-base font-semibold text-emerald-700">
+        Berita
+      </Link>
+      <Accordion>
+        <AccordionItem title="Profil Desa">
+          <ul className="pl-2 flex flex-col gap-2">
+            {profileDesa.map((item) => (
+              <li key={item.title}>
+                <Link href={item.href} className="block py-1 text-base text-emerald-700 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Data Desa">
+          <ul className="pl-2 flex flex-col gap-2">
+            {dataDesa.map((item) => (
+              <li key={item.title}>
+                <Link href={item.href} className="block py-1 text-base text-emerald-700 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Produk Desa">
+          <ul className="pl-2 flex flex-col gap-2">
+            {productDesa.map((item) => (
+              <li key={item.title}>
+                <Link href={item.href} className="block py-1 text-base text-emerald-700 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Galeri">
+          <ul className="pl-2 flex flex-col gap-2">
+            {galleryDesa.map((item) => (
+              <li key={item.title}>
+                <Link href={item.href} className="block py-1 text-base text-emerald-700 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Layanan">
+          <ul className="pl-2 flex flex-col gap-2">
+            {serviceDesa.map((item) => (
+              <li key={item.title}>
+                <Link href={item.href} className="block py-1 text-base text-emerald-700 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </AccordionItem>
+      </Accordion>
+      <Link href="/maps" className="py-2 text-base font-semibold text-emerald-700">
+        Peta Interaktif Desa
+      </Link>
+      <Link href="mailto:kutamukti.pemdes.karawangkab@gmail.com" target="_blank" className="py-2 text-base font-semibold text-emerald-700">
+        Hubungi Kami
+      </Link>
+    </div>
   );
 }
 

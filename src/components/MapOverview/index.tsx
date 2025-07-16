@@ -46,7 +46,7 @@ const MapOverview = () => {
         radius="none"
         className="object-cover object-[50%_20%] h-[700px] brightness-55"
       />
-      <div className="text-white absolute z-20 inset-0 max-w-6xl mx-auto flex flex-col justify-center">
+      <div className="text-white absolute z-20 inset-0 max-w-6xl px-2 mx-auto flex flex-col justify-center">
         <div className="max-w-xl space-y-4">
           <h2 className="text-4xl font-semibold">
             Transformasi Digital Bersama Desa Kutamukti

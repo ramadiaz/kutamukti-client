@@ -27,7 +27,7 @@ const ImagesGallery = () => {
     }, [])
 
     return (
-        <div className="max-w-6xl mx-auto w-full space-y-6">
+        <div className="max-w-6xl px-2 mx-auto w-full space-y-6">
             {
                 galleryData.map((item, i) => {
                     return (

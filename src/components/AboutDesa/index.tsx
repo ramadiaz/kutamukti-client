@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutDesa = () => {
     return (
-        <div className='max-w-6xl mx-auto py-14 space-y-4'>
+        <div className='max-w-6xl px-2 mx-auto py-14 space-y-4'>
             <h1 className='text-2xl font-semibold'>Profil Desa Kutamukti</h1>
             <p className='text-sm text-justify'>
                 Desa Kutamukti adalah salah satu desa yang berada di wilayah Kecamatan Kutawaluya, Kabupaten Karawang, Provinsi Jawa Barat, dengan kode pos 41358 dan kode wilayah Kemendagri 32.15.07.2005. Desa ini memiliki luas wilayah sekitar 2,38 km² dan terbagi ke dalam 4 dusun, 4 RW, serta 10 RT. Letaknya berbatasan langsung dengan Kecamatan Pedes di sebelah utara, Desa Kutajaya di sebelah timur, dan Desa Kutaraja di sebelah barat.
