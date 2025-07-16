@@ -24,8 +24,8 @@ const Navbar = () => {
       <div className="px-2 py-6 border-b border-neutral-300">
         <div className="max-w-6xl mx-auto flex flex-row gap-8 justify-between items-center">
           <div className="flex flex-row gap-4 items-center justify-between">
-            <Image alt="logo" width={50} height={50} src={"https://placehold.co/50"} />
-            <Image alt="logo" width={50} height={50} src={"https://placehold.co/50"} />
+            <Image alt="logo" width={40} height={50} src={"/logos/pemda-karawang.png"} />
+            <Image alt="logo" width={45} height={50} src={"/logos/jabar.png"} />
             <Link href={`/created-by`}>
               <Image alt="logo" width={50} height={50} src={"/logos/kkn-unsika.png"} />
             </Link>
