@@ -28,10 +28,28 @@ const Navbar = () => {
         <div className="max-w-6xl px-2 mx-auto flex flex-col md:flex-row gap-4 md:gap-8 justify-between items-center">
           <div className="flex flex-row gap-4 items-center justify-between w-full md:w-auto">
             <div className="flex flex-row gap-2 items-center">
-              <Image alt="logo" width={40} height={50} src={"/logos/pemda-karawang.png"} />
-              <Image alt="logo" width={45} height={50} src={"/logos/jabar.png"} />
-              <Link href={`/created-by`}>
-                <Image alt="logo" width={50} height={50} src={"/logos/kkn-unsika.png"} />
+              <Image
+                alt="logo"
+                height={50}
+                width={undefined}
+                src={"/logos/pemda-karawang.png"}
+                className="h-[50px] w-auto object-contain"
+              />
+              <Image
+                alt="logo"
+                height={50}
+                width={undefined}
+                src={"/logos/jabar.png"}
+                className="h-[50px] w-auto object-contain"
+              />
+              <Link href={`/created-by`} className="">
+                <Image
+                  alt="logo"
+                  height={50}
+                  width={undefined}
+                  src={"/logos/kkn-unsika.png"}
+                  className="h-[50px] w-auto object-contain"
+                />
               </Link>
             </div>
             {/* Hamburger menu for mobile using Headless UI */}
@@ -40,8 +58,19 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -79,7 +108,11 @@ const Navbar = () => {
         </div>
         {/* Mobile Drawer Menu using Headless UI Dialog */}
         <Transition show={mobileMenuOpen} as={React.Fragment}>
-          <Dialog as="div" className="relative z-[1000] md:hidden" onClose={setMobileMenuOpen}>
+          <Dialog
+            as="div"
+            className="relative z-[1000] md:hidden"
+            onClose={setMobileMenuOpen}
+          >
             <Transition.Child
               as={React.Fragment}
               enter="transition-opacity ease-linear duration-200"
@@ -109,8 +142,19 @@ const Navbar = () => {
                       onClick={() => setMobileMenuOpen(false)}
                       aria-label="Close menu"
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
                       </svg>
                     </button>
                     {/* Language dropdown */}
@@ -119,8 +163,12 @@ const Navbar = () => {
                         <DropdownTrigger>
                           <Button
                             variant="light"
-                            startContent={<TranslateIcon size={20} weight="thin" />}
-                            endContent={<CaretDownIcon size={16} color="#008FD7" />}
+                            startContent={
+                              <TranslateIcon size={20} weight="thin" />
+                            }
+                            endContent={
+                              <CaretDownIcon size={16} color="#008FD7" />
+                            }
                             className="w-full justify-between"
                           >
                             ID
