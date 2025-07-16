@@ -7,7 +7,7 @@ const SDGSPage = () => {
         <div>
             <PageHeader
                 title="Data Statistik Desa Kutamukti"
-                description="Halaman ini menyajikan informasi terkini mengenai Indeks Desa Membangun (IDM) dan Sustainable Development Goals (SDGs) di tingkat desa. IDM memberikan gambaran komposit tentang status kemajuan desa berdasarkan ketahanan sosial, ekonomi, dan ekologi/lingkungan. Sementara itu, SDGs desa menampilkan capaian masing-masing tujuan pembangunan berkelanjutan yang mencakup aspek sosial, kesehatan, pendidikan, lingkungan, hingga ekonomi. Statistik ini menjadi dasar perencanaan pembangunan desa yang lebih terarah, partisipatif, dan berkelanjutan."
+                description="Halaman ini memuat komitmen dan pencapaian Desa Kutamukti dalam mendukung Sustainable Development Goals (SDGs) atau Tujuan Pembangunan Berkelanjutan di tingkat desa. SDGs Desa terdiri dari 18 tujuan yang mencakup aspek sosial, ekonomi, lingkungan, dan kelembagaan yang bertujuan untuk mewujudkan desa tanpa kemiskinan, desa sehat, desa ramah lingkungan, serta tata kelola desa yang adil dan partisipatif. Melalui pendekatan ini, pembangunan desa diharapkan lebih terarah, inklusif, dan berkelanjutan untuk seluruh lapisan masyarakat."
                 breadCrumbs={["Data Desa", "SDGs "]}
             />
             <SDGS />

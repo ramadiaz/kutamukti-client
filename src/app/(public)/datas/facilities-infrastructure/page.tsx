@@ -7,7 +7,7 @@ const FacInfPage = () => {
         <div>
             <PageHeader
                 title="Sarana dan Prasarana"
-                description="Visi dan Misi Kementerian Komunikasi dan Informatika mengacu pada Visi dan Misi Presiden Republik Indonesia Prabowo Subianto dan Wakil Presiden Republik Indonesia Gibran Rakabuming Raka yaitu"
+                description="Halaman ini memberikan informasi mengenai berbagai sarana dan prasarana yang dimiliki Desa Kutamukti, seperti fasilitas pendidikan, kesehatan, tempat ibadah, jalan, saluran irigasi, dan infrastruktur pendukung lainnya. Ketersediaan dan kondisi sarana prasarana ini menjadi indikator penting dalam mendukung aktivitas masyarakat serta menunjang pertumbuhan ekonomi dan sosial desa. Dengan informasi yang terbuka, masyarakat dapat mengetahui perkembangan infrastruktur sekaligus ikut mengawal pemerataan pembangunan."
                 breadCrumbs={["Data Desa", "Sarana dan Prasarana"]}
             />
             <FacInf />

@@ -7,7 +7,7 @@ const IDMPage = () => {
         <div>
             <PageHeader
                 title="Data Statistik Desa Kutamukti"
-                description="Halaman ini menyajikan informasi terkini mengenai Indeks Desa Membangun (IDM) dan Sustainable Development Goals (SDGs) di tingkat desa. IDM memberikan gambaran komposit tentang status kemajuan desa berdasarkan ketahanan sosial, ekonomi, dan ekologi/lingkungan. Sementara itu, SDGs desa menampilkan capaian masing-masing tujuan pembangunan berkelanjutan yang mencakup aspek sosial, kesehatan, pendidikan, lingkungan, hingga ekonomi. Statistik ini menjadi dasar perencanaan pembangunan desa yang lebih terarah, partisipatif, dan berkelanjutan."
+                description="Halaman ini menyajikan informasi mengenai Indeks Desa Membangun (IDM) Desa Kutamukti, yaitu sebuah indeks yang digunakan untuk mengukur tingkat kemandirian dan kemajuan desa berdasarkan tiga dimensi utama: ketahanan sosial, ketahanan ekonomi, dan ketahanan ekologi/lingkungan. IDM menjadi acuan penting dalam menentukan status desa—apakah termasuk desa tertinggal, berkembang, atau mandiri—serta sebagai dasar dalam perencanaan dan evaluasi pembangunan desa secara menyeluruh. Dengan transparansi data IDM, masyarakat dapat melihat sejauh mana kemajuan pembangunan Desa Kutamukti dari waktu ke waktu."
                 breadCrumbs={["Data Desa", "IDM "]}
             />
             <IDM />

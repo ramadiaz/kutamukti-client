@@ -7,7 +7,7 @@ const ProductCatalogPage = () => {
         <div>
             <PageHeader
                 title="Katalog Produk"
-                description="Situs UMKM ini merupakan wadah dan tempat dimana beragam UMKM yang dimiliki desa digadang-gadang sebagai kekuatan yang akan bisa mendorong terciptanya peningkatan kesejahteraan dengan cara menciptakan produktivitas ekonomi bagi desa dengan berdasar pada ragam potensi yang dimiliki desa."
+                description="Halaman ini menampilkan katalog produk unggulan dari pelaku UMKM Desa Kutamukti, mulai dari hasil pertanian, kerajinan tangan, kuliner lokal, hingga produk kreatif lainnya. Setiap produk merupakan cerminan potensi dan kreativitas masyarakat desa yang terus berkembang. Dengan adanya katalog ini, diharapkan dapat memperluas jangkauan pemasaran, meningkatkan daya saing produk lokal, serta mendorong pertumbuhan ekonomi desa yang berkelanjutan."
                 breadCrumbs={["Produk Desa", "Katalog Produk"]}
             />
             <div className='h-12' />

@@ -7,7 +7,7 @@ const Complaint = () => {
     <div>
       <PageHeader
         title="Form Pengaduan Desa Kutamukti"
-        description="Visi dan Misi Kementerian Komunikasi dan Informatika mengacu pada Visi dan Misi Presiden Republik Indonesia Prabowo Subianto dan Wakil Presiden Republik Indonesia Gibran Rakabuming Raka yaitu"
+        description="Halaman ini menyediakan fasilitas bagi masyarakat Desa Kutamukti untuk menyampaikan laporan, keluhan, atau aspirasi terkait pelayanan publik, infrastruktur, lingkungan, dan isu-isu lainnya di lingkungan desa. Melalui sistem pengaduan ini, pemerintah desa berkomitmen untuk mendengarkan suara warga dan menindaklanjuti setiap laporan secara transparan dan responsif. Partisipasi aktif masyarakat sangat penting dalam mewujudkan tata kelola desa yang baik, terbuka, dan bertanggung jawab."
         breadCrumbs={["Service", "Laporan Pengaduan"]}
       />
       <ComplaintForm />
