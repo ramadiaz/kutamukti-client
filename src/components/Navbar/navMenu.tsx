@@ -14,21 +14,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { HouseIcon } from "@phosphor-icons/react";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
-
 const galleryDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Galeri Foto",
@@ -105,6 +90,20 @@ const serviceDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const productDesa: { title: string; href: string; description: string }[] = [
+  {
+    title: "Katalog Produk",
+    href: "/product/catalog",
+    description: "A modal dialog that interrupts the user with important ",
+  },
+  {
+    title: "Daftar UMKM",
+    href: "/product/store",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+];
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu className="" viewport={false}>
@@ -168,7 +167,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
+              {productDesa.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}

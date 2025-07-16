@@ -9,3 +9,18 @@ export type UMKM = {
   open_at: number;
   close_at: number;
 };
+
+export type UMKMProduct = {
+  uuid: string;
+  umkm_uuid: string;
+  name: string;
+  description: string;
+  variation: string;
+  price: number;
+  umkm: UMKM;
+  images: UMKMImage[];
+};
+
+export type UMKMImage = {
+  image_url: string;
+};
