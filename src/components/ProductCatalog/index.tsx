@@ -10,6 +10,7 @@ import {
   TagIcon,
   WhatsappLogoIcon,
 } from "@phosphor-icons/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const ProductCatalog = () => {
@@ -114,16 +115,16 @@ const ProductCard = ({ data }: { data: UMKMProduct }) => {
         <div className="h-4" />
       </div>
       <div className="absolute bottom-0 left-0 p-2 w-full">
-        <div className=" bg-neutral-100 rounded-xl cursor-pointer">
+        <Link href={`https://wa.me/${data.umkm.contact}`} className=" bg-neutral-100 rounded-xl cursor-pointer">
           <div className="w-full flex flex-row justify-between items-center gap-4 px-3 py-2">
             <Image src={`/images/default-avatar.webp`} width={30} height={30} />
             <div className="flex-grow">
-              <p className="text-left text-sm font-semibold">Mamat</p>
+              <p className="text-left text-sm font-semibold">{data.umkm.owner}</p>
               <p className="text-left text-sm opacity-70">Hubungi Penjual</p>
             </div>
             <WhatsappLogoIcon size={35} weight="thin" />
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

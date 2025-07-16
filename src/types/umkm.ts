@@ -8,6 +8,8 @@ export type UMKM = {
   latitude: number;
   open_at: number;
   close_at: number;
+  owner: string;
+  contact: string;
 };
 
 export type UMKMProduct = {
