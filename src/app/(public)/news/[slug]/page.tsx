@@ -14,11 +14,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: news?.raw_text?.slice(0, 160),
       type: "article",
       url: `https://kutamukti.com/news/${params.slug}`,
+      images: [news?.image_url || "https://kutamukti.com/default-og-image.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: news?.title,
       description: news?.raw_text?.slice(0, 160),
+      images: [news?.image_url || "https://kutamukti.com/default-og-image.jpg"],
+    },
+    alternates: {
+      canonical: `https://kutamukti.com/news/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: false,
+      },
     },
   };
 }

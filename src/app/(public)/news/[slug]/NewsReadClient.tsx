@@ -32,14 +32,37 @@ export default function NewsReadClient({ slug }: { slug: string }) {
     if (!newsData) return null;
 
     return (
-        <div>
-            <PageHeader
-                title={newsData?.title}
-                isTitleOnly
-                breadCrumbs={["Berita Desa Kutamukti"]}
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "NewsArticle",
+                        "headline": newsData.title,
+                        "description": newsData.raw_text?.slice(0, 160),
+                        "datePublished": newsData.created_at,
+                        "author": {
+                            "@type": "Person",
+                            "name": newsData.author || "Desa Kutamukti"
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": `https://kutamukti.com/news/${newsData.slug}`
+                        },
+                        "image": newsData.image_url || "https://kutamukti.com/default-og-image.jpg"
+                    })
+                }}
             />
-            <div className='h-8' />
-            <NewsRead data={newsData} />
-        </div>
+            <div>
+                <PageHeader
+                    title={newsData?.title}
+                    isTitleOnly
+                    breadCrumbs={["Berita Desa Kutamukti"]}
+                />
+                <div className='h-8' />
+                <NewsRead data={newsData} />
+            </div>
+        </>
     );
 } 
