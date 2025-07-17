@@ -33,7 +33,7 @@ const PageHeader = ({
             ))}
           </Breadcrumbs>
           <h1 className="mt-2 text-2xl uppercase">{title}</h1>
-          <p className="mt-1 text-sm">{description}</p>
+          <p className="mt-1 text-sm line-clamp-8">{description}</p>
         </div>
       </div>
     </div>

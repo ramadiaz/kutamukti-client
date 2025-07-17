@@ -6,7 +6,7 @@ const APB = () => {
   return (
     <div className="max-w-6xl px-2 mx-auto">
       <div className="w-full flex flex-row gap-6">
-        <div className="basis-1/3 flex justify-end">
+        <div className="sm:basis-1/3 hidden sm:flex justify-end">
           <Image
             src={`/images/apb-1.png`}
             alt="apb visualization"
@@ -15,7 +15,7 @@ const APB = () => {
             className="object-cover aspect-square"
           />
         </div>
-        <div className="basis-2/3">
+        <div className="sm:basis-2/3">
           <h1 className="font-semibold text-xl mb-6">APB Desa Tahun 2024</h1>
           <p>
             Anggaran Pendapatan dan Belanja Desa (APBDes) Desa Kutamukti Tahun
