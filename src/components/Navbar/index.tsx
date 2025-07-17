@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
+import { ENV } from "@/lib/environment";
 import {
   Button,
   Dropdown,
@@ -14,14 +16,123 @@ import {
   MagnifyingGlassIcon,
   TranslateIcon,
 } from "@phosphor-icons/react";
-import React, { useState } from "react";
-import { NavigationMenuDemo } from "./navMenu";
 import Link from "next/link";
+import { NavigationMenuDemo } from "./navMenu";
 import { Dialog, Transition } from "@headlessui/react";
 import { MobileNavMenu } from "./navMenu";
+import type { News } from "@/types/news";
+
+// Import route arrays from navMenu
+import {
+  // @ts-ignore
+  profileDesa,
+  // @ts-ignore
+  dataDesa,
+  // @ts-ignore
+  serviceDesa,
+  // @ts-ignore
+  productDesa,
+  // @ts-ignore
+  galleryDesa,
+} from "./navMenu";
+
+type SearchRoute = {
+  title: string;
+  href: string;
+  description: string;
+  type: "route";
+};
+
+type SearchNews = {
+  title: string;
+  href: string;
+  description: string;
+  type: "news";
+};
+
+const flattenRoutes = (): SearchRoute[] => {
+  const all = [
+    ...profileDesa,
+    ...dataDesa,
+    ...serviceDesa,
+    ...productDesa,
+    ...galleryDesa,
+    { title: "Berita", href: "/news", description: "Kumpulan berita Desa Kutamukti" },
+    { title: "Peta Interaktif Desa", href: "/maps", description: "Peta digital Desa Kutamukti" },
+    { title: "Hubungi Kami", href: "mailto:kutamukti.pemdes.karawangkab@gmail.com", description: "Kontak Pemerintah Desa Kutamukti" },
+  ];
+  return all.map((item) => ({ ...item, type: "route" as const }));
+};
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [news, setNews] = useState<SearchNews[]>([]);
+  const [loadingNews, setLoadingNews] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Fetch news on mount
+  useEffect(() => {
+    const fetchNews = async () => {
+      setLoadingNews(true);
+      try {
+        const res = await fetch(`${ENV.BASE_API}/news/getall`);
+        const data = await res.json();
+        setNews(
+          (data.body || []).map((item: News): SearchNews => ({
+            title: item.title,
+            href: `/news/${item.slug}`,
+            description: item.raw_text,
+            type: "news",
+          }))
+        );
+      } catch (e) {
+        setNews([]);
+      } finally {
+        setLoadingNews(false);
+      }
+    };
+    fetchNews();
+  }, []);
+
+  // Combine all routes
+  const allRoutes = flattenRoutes();
+
+  // Filtered results
+  const filteredRoutes: SearchRoute[] =
+    search.length > 0
+      ? allRoutes.filter((item) =>
+          item.title.toLowerCase().includes(search.toLowerCase())
+        )
+      : [];
+  const filteredNews: SearchNews[] =
+    search.length > 0
+      ? news.filter((item) =>
+          item.title.toLowerCase().includes(search.toLowerCase())
+        )
+      : [];
+
+  // Dropdown close on click outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setShowDropdown(false);
+      }
+    }
+    if (showDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showDropdown]);
+
   return (
     <div className="w-full sticky top-0 z-999 bg-background">
       <div className="px-2 py-6 border-b border-neutral-300">
@@ -75,7 +186,7 @@ const Navbar = () => {
             </button>
           </div>
           {/* Search bar: full width on mobile */}
-          <div className="w-full md:flex-grow mt-4 md:mt-0">
+          <div className="w-full md:flex-grow mt-4 md:mt-0 relative" ref={dropdownRef}>
             <Input
               placeholder="Cari Berita dan Layanan Kutamukti Disini"
               type="search"
@@ -83,7 +194,56 @@ const Navbar = () => {
               radius="md"
               startContent={<MagnifyingGlassIcon size={20} weight="thin" />}
               className="w-full"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setShowDropdown(true);
+              }}
+              onFocus={() => setShowDropdown(true)}
+              autoComplete="off"
             />
+            {showDropdown && (search.length > 0) && (
+              <div className="absolute left-0 right-0 mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+                {filteredRoutes.length > 0 && (
+                  <div>
+                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">Menu Navigasi</div>
+                    {filteredRoutes.map((item, idx) => (
+                      <Link
+                        key={item.href + idx}
+                        href={item.href}
+                        className="block px-4 py-2 hover:bg-emerald-50 text-sm text-emerald-900"
+                        onClick={() => setShowDropdown(false)}
+                      >
+                        <div className="font-medium">{item.title}</div>
+                        <div className="text-xs text-gray-500 line-clamp-1">{item.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                {filteredNews.length > 0 && (
+                  <div>
+                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">Berita</div>
+                    {filteredNews.map((item, idx) => (
+                      <Link
+                        key={item.href + idx}
+                        href={item.href}
+                        className="block px-4 py-2 hover:bg-emerald-50 text-sm text-emerald-900"
+                        onClick={() => setShowDropdown(false)}
+                      >
+                        <div className="font-medium">{item.title}</div>
+                        <div className="text-xs text-gray-500 line-clamp-1">{item.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                {filteredRoutes.length === 0 && filteredNews.length === 0 && !loadingNews && (
+                  <div className="px-4 py-4 text-center text-gray-400 text-sm">Tidak ada hasil ditemukan.</div>
+                )}
+                {loadingNews && (
+                  <div className="px-4 py-4 text-center text-gray-400 text-sm">Memuat berita...</div>
+                )}
+              </div>
+            )}
           </div>
           {/* Language dropdown: hidden on mobile, shown in desktop */}
           <div className="hidden md:block">

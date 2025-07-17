@@ -15,7 +15,7 @@ import {
 import { HouseIcon } from "@phosphor-icons/react";
 import { Accordion, AccordionItem } from "@heroui/react";
 
-const galleryDesa: { title: string; href: string; description: string }[] = [
+export const galleryDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Galeri Foto",
     href: "/gallery/images",
@@ -30,7 +30,7 @@ const galleryDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const profileDesa: { title: string; href: string; description: string }[] = [
+export const profileDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Tentang Desa dan Visi Misi",
     href: "/profile/about",
@@ -51,7 +51,7 @@ const profileDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const dataDesa: { title: string; href: string; description: string }[] = [
+export const dataDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Jumlah Penduduk dan APB",
     href: "/datas/population",
@@ -77,7 +77,7 @@ const dataDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const serviceDesa: { title: string; href: string; description: string }[] = [
+export const serviceDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Laporan Pengaduan",
     href: "/service/complaint",
@@ -91,7 +91,7 @@ const serviceDesa: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const productDesa: { title: string; href: string; description: string }[] = [
+export const productDesa: { title: string; href: string; description: string }[] = [
   {
     title: "Katalog Produk",
     href: "/product/catalog",
