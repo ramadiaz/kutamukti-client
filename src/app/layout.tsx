@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MainProviders from "@/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -60,6 +61,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <MainProviders>{children}</MainProviders>
+        <Analytics/>
       </body>
     </html>
   );
