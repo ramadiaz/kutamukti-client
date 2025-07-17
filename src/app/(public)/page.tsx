@@ -5,6 +5,11 @@ import NavCards from "@/components/NavCards";
 import NewsCards from "@/components/NewsCards";
 import VideoCards from "@/components/VideoCards";
 
+export const metadata = {
+  title: "Beranda - Desa Kutamukti",
+  description: "Selamat datang di website resmi Desa Kutamukti. Temukan informasi, berita, layanan, dan potensi desa kami di sini.",
+};
+
 const HomePage = () => {
   return (
     <div>

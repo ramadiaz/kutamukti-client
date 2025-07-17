@@ -3,6 +3,11 @@ import PageHeader from '@/components/PageHeader'
 import Population from '@/components/Population'
 import React from 'react'
 
+export const metadata = {
+  title: "Jumlah Penduduk & APB Desa Kutamukti",
+  description: "Data jumlah penduduk dan Anggaran Pendapatan Belanja (APB) Desa Kutamukti secara terperinci.",
+};
+
 const PopulationPage = () => {
     return (
         <div>

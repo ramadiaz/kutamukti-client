@@ -2,6 +2,11 @@ import ComplaintForm from "@/components/ComplaintForm";
 import PageHeader from "@/components/PageHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Layanan Pengaduan Desa Kutamukti",
+  description: "Formulir pengaduan untuk masyarakat Desa Kutamukti terkait pelayanan publik dan infrastruktur.",
+};
+
 const Complaint = () => {
   return (
     <div>

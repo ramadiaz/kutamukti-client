@@ -2,6 +2,11 @@ import NewsList from '@/components/NewsList'
 import PageHeader from '@/components/PageHeader'
 import React from 'react'
 
+export const metadata = {
+  title: "Berita Desa Kutamukti",
+  description: "Kumpulan berita terbaru, kegiatan, dan informasi penting seputar Desa Kutamukti.",
+};
+
 const NewsPage = () => {
     return (
         <div>

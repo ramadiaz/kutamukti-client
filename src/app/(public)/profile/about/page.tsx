@@ -3,6 +3,11 @@ import AboutDesa from "@/components/AboutDesa";
 import React from "react";
 import VissionMission from "@/components/VissionMission";
 
+export const metadata = {
+  title: "Tentang Desa Kutamukti & Visi Misi",
+  description: "Informasi tentang sejarah, visi, dan misi Desa Kutamukti untuk pembangunan berkelanjutan.",
+};
+
 const About = () => {
     return (
         <div>

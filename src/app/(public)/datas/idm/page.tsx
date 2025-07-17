@@ -2,6 +2,11 @@ import IDM from '@/components/IDM'
 import PageHeader from '@/components/PageHeader'
 import React from 'react'
 
+export const metadata = {
+  title: "Indeks Desa Membangun (IDM) Kutamukti",
+  description: "Data dan informasi tentang Indeks Desa Membangun (IDM) Desa Kutamukti.",
+};
+
 const IDMPage = () => {
     return (
         <div>

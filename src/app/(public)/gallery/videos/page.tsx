@@ -2,6 +2,11 @@ import PageHeader from '@/components/PageHeader'
 import VideoGallery from '@/components/VideoGallery'
 import React from 'react'
 
+export const metadata = {
+  title: "Galeri Video Desa Kutamukti",
+  description: "Kumpulan video kegiatan, budaya, dan dokumentasi Desa Kutamukti.",
+};
+
 const VideoGalleryPage = () => {
     return (
         <div>

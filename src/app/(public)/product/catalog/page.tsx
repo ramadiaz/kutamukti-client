@@ -2,6 +2,11 @@ import PageHeader from '@/components/PageHeader'
 import ProductCatalog from '@/components/ProductCatalog'
 import React from 'react'
 
+export const metadata = {
+  title: "Katalog Produk UMKM Desa Kutamukti",
+  description: "Jelajahi katalog produk unggulan UMKM Desa Kutamukti untuk mendukung ekonomi lokal.",
+};
+
 const ProductCatalogPage = () => {
     return (
         <div>

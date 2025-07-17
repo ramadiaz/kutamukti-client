@@ -2,6 +2,11 @@ import PageHeader from '@/components/PageHeader'
 import SDGS from '@/components/SDGS/indes'
 import React from 'react'
 
+export const metadata = {
+  title: "SDGs Desa Kutamukti",
+  description: "Komitmen dan pencapaian Desa Kutamukti dalam mendukung Sustainable Development Goals (SDGs).",
+};
+
 const SDGSPage = () => {
     return (
         <div>

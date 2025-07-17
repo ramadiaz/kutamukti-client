@@ -2,6 +2,11 @@ import History from '@/components/History'
 import PageHeader from '@/components/PageHeader'
 import React from 'react'
 
+export const metadata = {
+  title: "Sejarah Desa Kutamukti",
+  description: "Sejarah berdirinya, perkembangan, dan perjalanan Desa Kutamukti dari masa ke masa.",
+};
+
 const HistoryPage = () => {
     return (
         <div>

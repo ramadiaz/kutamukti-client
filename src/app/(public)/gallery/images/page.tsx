@@ -2,6 +2,11 @@ import ImagesGallery from '@/components/ImagesGallery'
 import PageHeader from '@/components/PageHeader'
 import React from 'react'
 
+export const metadata = {
+  title: "Galeri Foto Desa Kutamukti",
+  description: "Kumpulan foto kegiatan, pembangunan, dan keindahan Desa Kutamukti.",
+};
+
 const ImagesGalleryPage = () => {
     return (
         <div>

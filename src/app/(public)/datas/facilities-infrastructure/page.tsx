@@ -2,6 +2,11 @@ import FacInf from '@/components/FacInf'
 import PageHeader from '@/components/PageHeader'
 import React from 'react'
 
+export const metadata = {
+  title: "Sarana & Prasarana Desa Kutamukti",
+  description: "Informasi tentang fasilitas pendidikan, kesehatan, dan infrastruktur Desa Kutamukti.",
+};
+
 const FacInfPage = () => {
     return (
         <div>

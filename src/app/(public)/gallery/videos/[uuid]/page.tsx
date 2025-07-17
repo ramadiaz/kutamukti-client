@@ -1,48 +1,28 @@
-'use client'
+import { Metadata } from "next";
+import VideoPlayerClient from "./VideoPlayerClient";
 
-import PageHeader from '@/components/PageHeader'
-import VideoPlayer from '@/components/VideoPlayer'
-import { ENV } from '@/lib/environment'
-import { VideoTypes } from '@/types/videos'
-import React, { use, useEffect, useState } from 'react'
-
-const VideoPlayerPage = ({
-    params
-}: {
-    params: Promise<{ uuid: string }>
-}) => {
-    const [videoData, setVideoData] = useState<VideoTypes>()
-    const { uuid } = use(params)
-
-    const fetchData = async () => {
-        try {
-            const res = await fetch(ENV.BASE_API + `/gallery/video/${uuid}`)
-            if (res.ok) {
-                const data = await res.json()
-                setVideoData(data.body as VideoTypes)
-            }
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
-
-    if (!videoData) return null
-
-    return (
-        <div>
-            <PageHeader
-                title={videoData.title}
-                isTitleOnly
-                breadCrumbs={["Berita Desa Kutamukti"]}
-            />
-            <div className='h-8' />
-            <VideoPlayer data={videoData} />
-        </div>
-    )
+export async function generateMetadata({ params }: { params: { uuid: string } }): Promise<Metadata> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API || "https://api.kutamukti.com"}/gallery/video/${params.uuid}`);
+  if (!res.ok) return { title: "Galeri Video Desa Kutamukti" };
+  const data = await res.json();
+  const video = data.body;
+  return {
+    title: video?.title || "Galeri Video Desa Kutamukti",
+    description: video?.description?.slice(0, 160) || "Detail video Desa Kutamukti.",
+    openGraph: {
+      title: video?.title,
+      description: video?.description?.slice(0, 160),
+      type: "video.other",
+      url: `https://kutamukti.com/gallery/videos/${params.uuid}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: video?.title,
+      description: video?.description?.slice(0, 160),
+    },
+  };
 }
 
-export default VideoPlayerPage
+export default function VideoPlayerPage({ params }: { params: { uuid: string } }) {
+  return <VideoPlayerClient uuid={params.uuid} />;
+}

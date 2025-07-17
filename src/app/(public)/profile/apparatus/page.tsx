@@ -3,6 +3,11 @@ import ApparatusChart from "@/components/ApparatusList/apparatusChart";
 import PageHeader from "@/components/PageHeader";
 import React from "react";
 
+export const metadata = {
+  title: "Daftar Perangkat Desa Kutamukti",
+  description: "Struktur dan susunan perangkat Desa Kutamukti beserta tugas dan tanggung jawabnya.",
+};
+
 const Apparatus = () => {
   return (
     <div>
