@@ -57,7 +57,7 @@ const NewsRead = ({ data }: { data: News }) => {
             <div className='reader-content [&_.ql-editor]:text-lg [&_.ql-editor]:leading-relaxed [&_.ql-editor]:p-5 [&_.ql-editor]:text-justify [&_.ql-editor_p]:text-justify [&_.ql-editor_h1]:text-left [&_.ql-editor_h2]:text-left [&_.ql-editor_h3]:text-left [&_.ql-toolbar]:hidden'>
                 <TextEditor ref={quillRef} readOnly />
             </div>
-            <div className='w-full flex flex-row justify-between gap-4 mt-8'>
+            <div className='w-full flex flex-row justify-between gap-2 sm:gap-4 mt-8'>
                 <Button color='success' className='text-white bg-emerald-600 text-sm' onPress={() => router.back()}>
                     <div className='flex flex-row gap-2 items-center justify-center'>
                         <ArrowLeftIcon size={20} />

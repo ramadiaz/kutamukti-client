@@ -26,7 +26,7 @@ const VideoPlayer = ({ data }: { data: VideoTypes }) => {
                     {data.description}
                 </p>
             </div>
-            <div className='w-full flex flex-row justify-between gap-4 mt-8'>
+            <div className='w-full flex flex-row justify-between gap-2 sm:gap-4 mt-8'>
                 <Button color='success' className='text-white bg-emerald-600 text-sm' onPress={() => router.back()}>
                     <div className='flex flex-row gap-2 items-center justify-center'>
                         <ArrowLeftIcon size={20} />

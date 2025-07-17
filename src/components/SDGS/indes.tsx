@@ -110,7 +110,7 @@ const SDGS = () => {
             <div>
                 <h1 className='uppercase font-semibold text-2xl text-center'>Infografis Desa Kutamukti</h1>
             </div>
-            <div className='w-full flex flex-row gap-4 items-center justify-center mt-4'>
+            <div className='w-full flex flex-row gap-2 sm:gap-4 items-center justify-center mt-4'>
                 <Link href={`/datas/idm`} className='py-4 px-8 rounded-xl shadow-lg aspect-square flex flex-col items-center justify-center bg-gradient-to-br from-emerald-0 to-emerald-0 hover:bg-gradient-to-br hover:from-emerald-200 hover:to-emerald-100 transition-all duration-300' >
                     <ChartBarIcon size={44} weight='thin' />
                     <p className='text-center'>IDM</p>
@@ -121,7 +121,7 @@ const SDGS = () => {
                 </Link>
             </div>
             <div>
-                <div className='flex flex-col-reverse sm:flex-row gap-4 items-center mt-8'>
+                <div className='flex flex-col-reverse sm:flex-row gap-2 sm:gap-4 items-center mt-8'>
                     <div className='basis-3/4 my-8 sm:my-0'>
                         <h1 className='font-semibold'>
                             SDGs Kutamukti
@@ -131,7 +131,7 @@ const SDGS = () => {
                         </p>
                     </div>
                     <div className='basis-1/4'>
-                        <div className='w-full bg-gradient-to-br from-emerald-600 to-emerald-400 text-white flex flex-row gap-4 items-center p-6 rounded-xl'>
+                        <div className='w-full bg-gradient-to-br from-emerald-600 to-emerald-400 text-white flex flex-row gap-2 sm:gap-4 items-center p-6 rounded-xl'>
                             <p className='basis-2/3 font-semibold'>
                                 Skor SDGs Kutamukti
                             </p>
@@ -141,7 +141,7 @@ const SDGS = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full flex flex-wrap gap-4 mt-4 justify-center items-center'>
+                <div className='w-full flex flex-wrap gap-2 sm:gap-4 mt-4 justify-center items-center'>
                     {SDGSData.map((data, index) => {
                         return (
                             <SDGSCard key={index} data={data} />

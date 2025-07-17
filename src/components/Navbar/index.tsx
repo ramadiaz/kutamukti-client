@@ -140,8 +140,8 @@ const Navbar = () => {
   return (
     <div className="w-full sticky top-0 z-999 bg-background">
       <div className="px-2 py-6 border-b border-neutral-300">
-        <div className="max-w-6xl px-2 mx-auto flex flex-col md:flex-row gap-4 md:gap-8 justify-between items-center">
-          <div className="flex flex-row gap-4 items-center justify-between w-full md:w-auto">
+        <div className="max-w-6xl px-2 mx-auto flex flex-col md:flex-row gap-2 sm:gap-4 md:gap-8 justify-between items-center">
+          <div className="flex flex-row gap-2 sm:gap-4 items-center justify-between w-full md:w-auto">
             <div className="flex flex-row gap-2 items-center">
               <Image
                 alt="logo"

@@ -35,8 +35,8 @@ const VideoCards = () => {
       <h1 className="uppercase font-semibold text-2xl pb-8">
         Realisasi Program Desa Kutamukti
       </h1>
-      <div className="flex flex-col sm:flex-row gap-4 items-start justify-between w-full">
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:basis-3/4">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start justify-between w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 sm:basis-3/4">
           {videos.slice(0, 6).map((item, i) => {
             return (
               <Card

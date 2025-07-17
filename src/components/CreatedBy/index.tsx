@@ -110,7 +110,7 @@ const CreatedBy = () => {
 
     return (
         <div className='w-full mx-auto max-w-6xl px-2'>
-            <div className='w-full flex flex-wrap justify-center gap-4'>
+            <div className='w-full flex flex-wrap justify-center gap-2 sm:gap-4'>
                 {ProfileData.map((item, i) => {
                     return (
                         <ProfileCard key={i} data={item} />

@@ -65,7 +65,7 @@ const MapOverview = () => {
           </p>
           <Link
             href={`/maps`}
-            className="flex flex-row gap-4 items-center pt-8"
+            className="flex flex-row gap-2 sm:gap-4 items-center pt-8"
           >
             <ArrowCircleRightIcon size={32} />
             <p>Baca Selengkapnya</p>

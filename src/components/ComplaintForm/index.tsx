@@ -53,7 +53,7 @@ const ComplaintForm = () => {
           Form Pengaduan ini disediakan sebagai sarana bagi masyarakat untuk menyampaikan keluhan, saran, atau laporan terkait pelayanan publik, infrastruktur desa, lingkungan, administrasi, dan isu-isu lainnya yang terjadi di wilayah Desa Kutamukti.
         </p>
       </div>
-      <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-4">
+      <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-4">
         <div className="basis-1/2 space-y-4">
           <Input
             variant="bordered"

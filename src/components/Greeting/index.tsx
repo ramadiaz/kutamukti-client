@@ -5,7 +5,7 @@ import { Image } from "@heroui/react";
 const Greeting = () => {
   return (
     <div className="max-w-6xl mx-auto bg-gradient-to-br to-neutral-200 p-8 rounded-xl">
-      <div className="w-full flex flex-col sm:flex-row items-center gap-4">
+      <div className="w-full flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
         <div className="">
           <Image
             src={`/images/perangkat-desa/aan.jpg`}

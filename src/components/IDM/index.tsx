@@ -60,7 +60,7 @@ const IDM = () => {
             <div>
                 <h1 className='uppercase font-semibold text-2xl text-center'>Infografis Desa Kutamukti</h1>
             </div>
-            <div className='w-full flex flex-row gap-4 items-center justify-center mt-4'>
+            <div className='w-full flex flex-row gap-2 sm:gap-4 items-center justify-center mt-4'>
                 <Link href={`/datas/idm`} className='py-4 px-8 rounded-xl shadow-lg aspect-square flex flex-col items-center justify-center bg-gradient-to-br from-emerald-600 to-emerald-400 text-white transition-all duration-300' >
                     <ChartBarIcon size={44} weight='thin' />
                     <p className='text-center'>IDM</p>
@@ -119,7 +119,7 @@ const IDM = () => {
                     </div>
                 </div>
                 <div className='basis-2/3'>
-                    <div className='w-full flex flex-wrap gap-4 mt-4 justify-center sm:justify-start items-center'>
+                    <div className='w-full flex flex-wrap gap-2 sm:gap-4 mt-4 justify-center sm:justify-start items-center'>
                         {IDMData.map((item, i) => {
                             return (
                                 <IDMCard key={i} data={item} />

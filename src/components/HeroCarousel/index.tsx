@@ -74,7 +74,7 @@ const ImageOverlay = ({
               <p className="">Pelajari Lebih Lanjut</p>
             </Link>
           </div>
-          <div className="basis-1/3 flex flex-row gap-4 w-full justify-end items-center">
+          <div className="basis-1/3 flex flex-row gap-2 sm:gap-4 w-full justify-end items-center">
             {bannerData.map((_, j) => (
               <div
                 key={j}
@@ -92,7 +92,7 @@ const ImageOverlay = ({
         </div>
         <div className="border-t pt-4">
           <ScrollShadow className="w-full pb-4" orientation="horizontal">
-            <div className="w-max flex flex-row gap-4">
+            <div className="w-max flex flex-row gap-2 sm:gap-4">
               <div className="grow-0 flex flex-row gap-2 w-sm">
                 <Image
                   src={"/images/hero-1.JPG"}

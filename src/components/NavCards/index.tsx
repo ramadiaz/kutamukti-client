@@ -55,7 +55,7 @@ const NavCards = () => {
           Navigasi Favorit Warga Kutamukti
         </h2>
         <ScrollShadow className="w-full pb-4" orientation="horizontal">
-          <div className="flex flex-row gap-4 w-max py-4 px-2">
+          <div className="flex flex-row gap-2 sm:gap-4 w-max py-4 px-2">
             {favoriteCards.map((card) => (
               <Link href={card.href} key={card.title} className="focus:outline-none">
                 <Cards

@@ -71,7 +71,7 @@ const ProductCatalog = () => {
 
 const ProductList = ({ data }: { data: UMKMProduct[] }) => {
   return (
-    <div className="flex flex-grow justify-center items-center gap-4">
+    <div className="flex flex-grow justify-center items-center gap-2 sm:gap-4">
       {data.map((item, i) => {
         return <ProductCard data={item} key={i} />;
       })}
@@ -116,7 +116,7 @@ const ProductCard = ({ data }: { data: UMKMProduct }) => {
       </div>
       <div className="absolute bottom-0 left-0 p-2 w-full">
         <Link href={`https://wa.me/${data.umkm.contact}`} className=" bg-neutral-100 rounded-xl cursor-pointer">
-          <div className="w-full flex flex-row justify-between items-center gap-4 px-3 py-2">
+          <div className="w-full flex flex-row justify-between items-center gap-2 sm:gap-4 px-3 py-2">
             <Image src={`/images/default-avatar.webp`} width={30} height={30} />
             <div className="flex-grow">
               <p className="text-left text-sm font-semibold">{data.umkm.owner}</p>
