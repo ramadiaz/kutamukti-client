@@ -1,9 +1,50 @@
 "use client";
 
+import Link from "next/link";
 import { ScrollShadow } from "@heroui/react";
-import { ArrowCircleRightIcon, FolderOpenIcon } from "@phosphor-icons/react";
+import {
+  ArrowCircleRightIcon,
+  HouseIcon,
+  ImageSquareIcon,
+  MegaphoneIcon,
+  StorefrontIcon,
+  EnvelopeSimpleOpenIcon,
+} from "@phosphor-icons/react";
 import { ReactNode } from "react";
 import NetworkBackground from "../backgrounds/network-background";
+
+const favoriteCards = [
+  {
+    icon: <MegaphoneIcon size={50} weight="fill" />, // Berita
+    title: "Berita",
+    desc: "Kabar dan informasi terbaru seputar Desa Kutamukti.",
+    href: "/news",
+  },
+  {
+    icon: <HouseIcon size={50} weight="fill" />, // Profil Desa
+    title: "Profil Desa",
+    desc: "Sejarah, visi misi, dan perangkat Desa Kutamukti.",
+    href: "/profile/about",
+  },
+  {
+    icon: <StorefrontIcon size={50} weight="fill" />, // Produk Desa
+    title: "Produk Desa",
+    desc: "Katalog produk unggulan dan UMKM Desa Kutamukti.",
+    href: "/product/catalog",
+  },
+  {
+    icon: <ImageSquareIcon size={50} weight="fill" />, // Galeri Foto
+    title: "Galeri Foto",
+    desc: "Kumpulan foto kegiatan dan keindahan Desa Kutamukti.",
+    href: "/gallery/images",
+  },
+  {
+    icon: <EnvelopeSimpleOpenIcon size={50} weight="fill" />, // Layanan Pengaduan
+    title: "Layanan Pengaduan",
+    desc: "Sampaikan laporan, keluhan, atau aspirasi Anda di sini.",
+    href: "/service/complaint",
+  },
+];
 
 const NavCards = () => {
   return (
@@ -11,35 +52,19 @@ const NavCards = () => {
       <NetworkBackground zIndex={10} />
       <div className="relative z-10 pt-4">
         <h2 className="text-2xl font-semibold pb-10">
-          Layanan Berkualitas Untuk Masa Depan Digital
+          Navigasi Favorit Warga Kutamukti
         </h2>
         <ScrollShadow className="w-full pb-4" orientation="horizontal">
           <div className="flex flex-row gap-4 w-max py-4 px-2">
-            <Cards
-              icon={<FolderOpenIcon size={50} weight="fill" />}
-              title={"Sertifikasi"}
-              desc={"Pembuatan Sertifikat menjadi lebih mudah dengan digital"}
-            />
-            <Cards
-              icon={<FolderOpenIcon size={50} weight="fill" />}
-              title={"Sertifikasi"}
-              desc={"Pembuatan Sertifikat menjadi lebih mudah dengan digital"}
-            />
-            <Cards
-              icon={<FolderOpenIcon size={50} weight="fill" />}
-              title={"Sertifikasi"}
-              desc={"Pembuatan Sertifikat menjadi lebih mudah dengan digital"}
-            />
-            <Cards
-              icon={<FolderOpenIcon size={50} weight="fill" />}
-              title={"Sertifikasi"}
-              desc={"Pembuatan Sertifikat menjadi lebih mudah dengan digital"}
-            />
-            <Cards
-              icon={<FolderOpenIcon size={50} weight="fill" />}
-              title={"Sertifikasi"}
-              desc={"Pembuatan Sertifikat menjadi lebih mudah dengan digital"}
-            />
+            {favoriteCards.map((card) => (
+              <Link href={card.href} key={card.title} className="focus:outline-none">
+                <Cards
+                  icon={card.icon}
+                  title={card.title}
+                  desc={card.desc}
+                />
+              </Link>
+            ))}
           </div>
         </ScrollShadow>
       </div>
