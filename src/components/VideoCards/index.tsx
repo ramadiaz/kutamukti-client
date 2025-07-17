@@ -2,7 +2,7 @@
 
 import { ENV } from "@/lib/environment";
 import { VideoTypes } from "@/types/videos";
-import { Card, CardBody, CardFooter, Image } from "@heroui/react";
+import { Button, Card, CardBody, CardFooter, Image } from "@heroui/react";
 import { CaretDoubleRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -17,7 +17,7 @@ const VideoCards = () => {
         headers: {
           "Content-Type": "application/json",
         },
-      })
+      });
       const data = await res.json();
       setVideos(data.body);
     } catch (error) {
@@ -35,11 +35,16 @@ const VideoCards = () => {
       <h1 className="uppercase font-semibold text-2xl pb-8">
         Realisasi Program Desa Kutamukti
       </h1>
-      <div className="flex flex-row gap-4 items-start justify-between w-full">
-        <div className="grid grid-cols-3 gap-4 basis-3/4">
+      <div className="flex flex-col sm:flex-row gap-4 items-start justify-between w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:basis-3/4">
           {videos.slice(0, 6).map((item, i) => {
             return (
-              <Card key={i} className="py-4" as={Link} href={`/gallery/videos/` + item.uuid}>
+              <Card
+                key={i}
+                className="py-4"
+                as={Link}
+                href={`/gallery/videos/` + item.uuid}
+              >
                 <CardBody className="overflow-visible pt-0">
                   <Image
                     alt="Card background"
@@ -48,22 +53,27 @@ const VideoCards = () => {
                     width={270}
                   />
                   <div className="pt-2 flex-col items-start">
-                    <h4 className="font-bold text-large line-clamp-2">{item.title}</h4>
-                    <small className="text-default-500 line-clamp-4">{item.description}</small>
+                    <h4 className="font-bold text-large line-clamp-2">
+                      {item.title}
+                    </h4>
+                    <small className="text-default-500 line-clamp-4">
+                      {item.description}
+                    </small>
                   </div>
                 </CardBody>
                 <CardFooter>
-                  <p className="text-tiny uppercase font-bold">News</p>
+                  <p className="text-tiny uppercase font-bold">Video</p>
                 </CardFooter>
               </Card>
             );
           })}
         </div>
-        <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 flex items-center justify-center rounded-xl relative">
-          <Link href={`/gallery/videos`}  className="absolute bottom-4 right-4 flex flex-row items-center text-white">
-            <p className="text-sm">
-            Selengkapnya
-            </p>
+        <div className="hidden bg-gradient-to-br from-emerald-500 to-emerald-700 w-3xs py-18 sm:flex items-center justify-center rounded-xl relative">
+          <Link
+            href={`/gallery/videos`}
+            className="absolute bottom-4 right-4 flex flex-row items-center text-white"
+          >
+            <p className="text-sm">Selengkapnya</p>
             <CaretDoubleRightIcon size={16} weight="bold" />
           </Link>
           <div className="text-white h-max">
@@ -72,6 +82,17 @@ const VideoCards = () => {
             </p>
             <p className="text-center">Telah Diunggah</p>
           </div>
+        </div>
+        <div className="sm:hidden w-full flex justify-end mt-2">
+          <Button
+            as={Link}
+            href={`/gallery/videos`}
+            endContent={<CaretDoubleRightIcon size={16} weight="bold" />}
+            color="success"
+            className="text-white bg-emerald-600"
+          >
+            Selengkapnya
+          </Button>
         </div>
       </div>
     </div>

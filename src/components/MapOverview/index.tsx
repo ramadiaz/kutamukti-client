@@ -10,6 +10,8 @@ import {
 import Link from "next/link";
 import { ReactNode } from "react";
 import NetworkBackground from "../backgrounds/network-background";
+import { useMediaQuery } from "react-responsive";
+import useIsMobile from "@/hooks/useIsMobile";
 
 type NavType = {
   icon: ReactNode;
@@ -40,16 +42,18 @@ const NavData: NavType[] = [
 ];
 
 const MapOverview = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <div className="h-[700px] relative">
+    <div className="h-[900px] sm:h-[700px] relative">
       <NetworkBackground zIndex={20} />
       <Image
         src={`/images/background-map.png`}
         width="100%"
-        height={700}
+        height={isMobile ? 900 : 700}
         alt="map"
         radius="none"
-        className="object-cover object-[50%_20%] h-[700px] brightness-55"
+        className="object-cover object-[50%_20%] h-[900px] sm:h-[700px] brightness-55"
       />
       <div className="text-white absolute z-20 inset-0 max-w-6xl px-2 mx-auto flex flex-col justify-center">
         <div className="max-w-xl space-y-4">
@@ -57,14 +61,18 @@ const MapOverview = () => {
             Jelajahi Desa Kutamukti Secara Digital
           </h2>
           <p>
-            Temukan informasi penting, produk lokal, dan layanan publik yang mudah diakses untuk seluruh warga dan pengunjung Desa Kutamukti.
+            Temukan informasi penting, produk lokal, dan layanan publik yang
+            mudah diakses untuk seluruh warga dan pengunjung Desa Kutamukti.
           </p>
-          <Link href={`/maps`} className="flex flex-row gap-4 items-center pt-8">
+          <Link
+            href={`/maps`}
+            className="flex flex-row gap-4 items-center pt-8"
+          >
             <ArrowCircleRightIcon size={32} />
             <p>Baca Selengkapnya</p>
           </Link>
         </div>
-        <div className="border-t mt-8 w-full flex flex-row justify-between items-center">
+        <div className="border-t mt-8 w-full flex flex-col sm:flex-row justify-between sm:items-center">
           {NavData.map((item, i) => {
             return (
               <Link
