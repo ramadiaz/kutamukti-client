@@ -1,7 +1,12 @@
 "use client";
 
 import { Image } from "@heroui/react";
-import { ArrowCircleRightIcon, GlobeIcon } from "@phosphor-icons/react";
+import {
+  ArrowCircleRightIcon,
+  GlobeIcon,
+  StorefrontIcon,
+  ChatCircleDotsIcon,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import NetworkBackground from "../backgrounds/network-background";
@@ -15,22 +20,22 @@ type NavType = {
 
 const NavData: NavType[] = [
   {
-    icon: <GlobeIcon size={55} weight="thin" />,
-    title: "Infrastrukur Digital",
-    desc: "Membangun Infrastruktur Internet dan konektivitas yang inklusif dengan layanan berkualitas tinggi.",
-    href: "#",
+    icon: <GlobeIcon size={55} weight="fill" />, // Data & Peta Desa
+    title: "Data & Peta Desa",
+    desc: "Eksplorasi data kependudukan, fasilitas, dan peta interaktif Desa Kutamukti.",
+    href: "/maps",
   },
   {
-    icon: <GlobeIcon size={55} weight="thin" />,
-    title: "Infrastrukur Digital",
-    desc: "Membangun Infrastruktur Internet dan konektivitas yang inklusif dengan layanan berkualitas tinggi.",
-    href: "#",
+    icon: <StorefrontIcon size={55} weight="fill" />, // Produk Lokal
+    title: "Produk Lokal",
+    desc: "Temukan produk unggulan dan UMKM yang menjadi kebanggaan desa.",
+    href: "/product/catalog",
   },
   {
-    icon: <GlobeIcon size={55} weight="thin" />,
-    title: "Infrastrukur Digital",
-    desc: "Membangun Infrastruktur Internet dan konektivitas yang inklusif dengan layanan berkualitas tinggi.",
-    href: "#",
+    icon: <ChatCircleDotsIcon size={55} weight="fill" />, // Layanan Warga
+    title: "Layanan Warga",
+    desc: "Akses layanan pengaduan, agenda desa, dan bantuan publik secara digital.",
+    href: "/service/complaint",
   },
 ];
 
@@ -49,14 +54,12 @@ const MapOverview = () => {
       <div className="text-white absolute z-20 inset-0 max-w-6xl px-2 mx-auto flex flex-col justify-center">
         <div className="max-w-xl space-y-4">
           <h2 className="text-4xl font-semibold">
-            Transformasi Digital Bersama Desa Kutamukti
+            Jelajahi Desa Kutamukti Secara Digital
           </h2>
           <p>
-            Program kerja Kementerian Komdigi 2019 - 2024 berfokus untuk
-            menghubungkan dan memajukan bangsa melalui akselerasi transformasi
-            digital melalui berbagai aspek
+            Temukan informasi penting, produk lokal, dan layanan publik yang mudah diakses untuk seluruh warga dan pengunjung Desa Kutamukti.
           </p>
-          <Link href={`#`} className="flex flex-row gap-4 items-center pt-8">
+          <Link href={`/maps`} className="flex flex-row gap-4 items-center pt-8">
             <ArrowCircleRightIcon size={32} />
             <p>Baca Selengkapnya</p>
           </Link>
@@ -64,9 +67,10 @@ const MapOverview = () => {
         <div className="border-t mt-8 w-full flex flex-row justify-between items-center">
           {NavData.map((item, i) => {
             return (
-              <div
+              <Link
+                href={item.href}
                 key={i}
-                className="flex flex-row items-center justify-start gap-2 pt-6"
+                className="flex flex-row items-center justify-start gap-2 pt-6 hover:brightness-125 transition-all"
               >
                 <div className="size-20 flex items-center justify-center rounded-lg bg-gradient-to-bl from-emerald-500 to-emerald-700">
                   {item.icon}
@@ -75,7 +79,7 @@ const MapOverview = () => {
                   <h3 className="uppercase font-semibold">{item.title}</h3>
                   <p className="text-xs">{item.desc}</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
