@@ -3,11 +3,9 @@ import { Image, useDisclosure } from "@heroui/react";
 import { ArrowCircleRightIcon } from "@phosphor-icons/react";
 import React from "react";
 import ApparatusModal from "./apparatusModal";
-import useIsMobile from "@/hooks/useIsMobile";
 
 const ApparatusCard = ({ data }: { data: ApparatusType }) => {
   const disclosure = useDisclosure();
-  const isMobile = useIsMobile();
 
   return (
     <div className="rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-8 bg-neutral-100">

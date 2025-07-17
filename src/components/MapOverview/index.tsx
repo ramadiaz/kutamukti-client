@@ -10,7 +10,6 @@ import {
 import Link from "next/link";
 import { ReactNode } from "react";
 import NetworkBackground from "../backgrounds/network-background";
-import { useMediaQuery } from "react-responsive";
 import useIsMobile from "@/hooks/useIsMobile";
 
 type NavType = {

@@ -24,15 +24,10 @@ import type { News } from "@/types/news";
 
 // Import route arrays from navMenu
 import {
-  // @ts-ignore
   profileDesa,
-  // @ts-ignore
   dataDesa,
-  // @ts-ignore
   serviceDesa,
-  // @ts-ignore
   productDesa,
-  // @ts-ignore
   galleryDesa,
 } from "./navMenu";
 import { usePathname } from "next/navigation";
@@ -96,6 +91,7 @@ const Navbar = () => {
           }))
         );
       } catch (e) {
+        console.error(e)
         setNews([]);
       } finally {
         setLoadingNews(false);
