@@ -70,13 +70,13 @@ const IDM = () => {
                     <p className='text-center'>SDGs</p>
                 </Link>
             </div>
-            <div className='w-full flex flex-row gap-6 mt-6'>
+            <div className='w-full flex flex-col sm:flex-row gap-6 mt-6'>
                 <div className='basis-1/3'>
                     <h2 className='font-semibold text-2xl mb-2'>IDM Kutamukti</h2>
                     <p className='text-sm text-justify'>
                         IDM adalah alat ukur yang digunakan oleh pemerintah untuk mengetahui tingkat kemandirian dan perkembangan suatu desa. Berdasarkan IDM, desa-desa di Indonesia dikategorikan dalam beberapa tingkatan, mulai dari desa sangat tertinggal, tertinggal, berkembang, maju, hingga mandiri. Nilai IDM yang semakin tinggi menunjukkan kondisi desa yang semakin baik dari segi sosial, ekonomi, dan ekolagi. IDM dapat menentukan status desa menjadi Desa Mandiri, Maju, Berkembang. Tertinggal, dan Sangat Tertinggal berdasarkan nilai dari indeks-indeks tersebut. Indeks Desa Membangun (IDM) merupakan indeks komposit yang dibentuk dari tiga indeks, yaitu:
                     </p>
-                    <div className='flex flex-row mt-4'>
+                    <div className='hidden sm:flex flex-row mt-4'>
                         <div className='border py-2 px-6 flex flex-col items-center justify-start aspect-square w-[200px]'>
                             <Image
                                 src={`/idm/1.png`}
@@ -119,7 +119,7 @@ const IDM = () => {
                     </div>
                 </div>
                 <div className='basis-2/3'>
-                    <div className='w-full flex flex-wrap gap-4 mt-4 justify-start items-center'>
+                    <div className='w-full flex flex-wrap gap-4 mt-4 justify-center sm:justify-start items-center'>
                         {IDMData.map((item, i) => {
                             return (
                                 <IDMCard key={i} data={item} />
