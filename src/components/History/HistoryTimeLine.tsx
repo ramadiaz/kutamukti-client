@@ -49,16 +49,16 @@ const HistoryTimeLine = () => {
 
 const TimeLineCard = ({ data }: { data: HistoryType }) => {
   return (
-    <div className='p-8 bg-gradient-to-br from-neutral-200 flex flex-row justify-between gap-4 rounded-xl'>
-      <div className='basis-3/4 space-y-4'>
-        <h2 className='font-semibold text-2xl'>
+    <div className='p-6 sm:p-8 bg-gradient-to-br from-neutral-200 flex flex-row justify-between gap-4 rounded-xl'>
+      <div className='sm:basis-3/4 space-y-2 sm:space-y-4'>
+        <h2 className='font-semibold text-xl sm:text-2xl'>
           {data.title}
         </h2>
-        <p>
+        <p className='text-justify'>
           {data.desc}
         </p>
       </div>
-      <div className='basis-1/4 flex justify-end'>
+      <div className='hidden sm:basis-1/4 sm:flex justify-end'>
         <Image
           src={data.image}
           alt={data.title}
