@@ -35,6 +35,7 @@ import {
   // @ts-ignore
   galleryDesa,
 } from "./navMenu";
+import { usePathname } from "next/navigation";
 
 type SearchRoute = {
   title: string;
@@ -71,6 +72,13 @@ const Navbar = () => {
   const [news, setNews] = useState<SearchNews[]>([]);
   const [loadingNews, setLoadingNews] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if(mobileMenuOpen) {
+      setMobileMenuOpen(false)
+    }
+  }, [pathname])
 
   // Fetch news on mount
   useEffect(() => {
