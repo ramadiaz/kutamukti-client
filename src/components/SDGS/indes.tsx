@@ -121,8 +121,8 @@ const SDGS = () => {
                 </Link>
             </div>
             <div>
-                <div className='flex flex-row gap-4 items-center mt-8'>
-                    <div className='basis-3/4'>
+                <div className='flex flex-col-reverse sm:flex-row gap-4 items-center mt-8'>
+                    <div className='basis-3/4 my-8 sm:my-0'>
                         <h1 className='font-semibold'>
                             SDGs Kutamukti
                         </h1>
@@ -155,22 +155,22 @@ const SDGS = () => {
 
 const SDGSCard = ({ data }: { data: SDGSType }) => {
     return (
-        <div className='p-4 rounded-lg bg-gradient-to-br from-emerald-600 to-emerald-400 text-white w-[300px]'>
+        <div className='p-2 sm:p-4 rounded-lg bg-gradient-to-br from-emerald-600 to-emerald-400 text-white w-[150px] sm:w-[300px] '>
             <div className='flex flex-row gap-2 items-start'>
                 <Image
                     src={data.image}
                     width={200}
                     alt={data.aspect}
-                    className='basis-1/3 object-cover w-[100px] h-[100px] rounded-lg'
+                    className='basis-1/3 object-cover hidden sm:block w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] rounded-lg'
                 />
-                <div className='basis-2/3'>
-                    <p>Nilai</p>
-                    <p className='font-semibold'>
+                <div className='basis-2/3 h-[100px]'>
+                    <p className='text-sm sm:text-medium'>Nilai</p>
+                    <p className='font-semibold text-sm sm:text-medium'>
                         {data.aspect}
                     </p>
                 </div>
             </div>
-            <p className='text-right font-semibold text-2xl'>{data.score}</p>
+            <p className='text-right font-semibold text-xl sm:text-2xl'>{data.score}</p>
         </div>
     )
 }
