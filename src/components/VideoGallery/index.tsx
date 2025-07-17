@@ -31,8 +31,8 @@ const VideoGallery = () => {
     }, [])
 
     return (
-        <div className="max-w-6xl px-2 mx-auto py-16">
-            <div className="flex flex-wrap gap-4">
+        <div className="max-w-6xl px-2 mx-auto">
+            <div className="flex flex-wrap justify-center gap-4">
                 {
                     videoData.map((item, i) => {
                         return (

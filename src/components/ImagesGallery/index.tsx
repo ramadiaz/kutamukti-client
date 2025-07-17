@@ -32,7 +32,7 @@ const ImagesGallery = () => {
                 galleryData.map((item, i) => {
                     return (
                         <div key={i} className="pb-16">
-                            <h3 className="text-xl uppercase">
+                            <h3 className="text-medium sm:text-xl">
                                 {item.title}
                             </h3>
                             <div className="w-full flex flex-row items-center mb-8">

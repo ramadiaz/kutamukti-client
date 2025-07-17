@@ -18,7 +18,7 @@ const VideoPlayer = ({ data }: { data: VideoTypes }) => {
                 id={data.youtube_id}
                 title={data.title}
             />
-            <div className='py-4'>
+            <div className='py-4 space-y-2'>
                 <h1 className='font-semibold text-2xl'>
                     {data.title}
                 </h1>
