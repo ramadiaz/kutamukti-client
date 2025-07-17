@@ -18,6 +18,35 @@ export const metadata: Metadata = {
   title: "Web Resmi Desa Kuatmukti",
   description:
     "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://kutamukti.id/",
+  },
+  openGraph: {
+    title: "Web Resmi Desa Kuatmukti",
+    description:
+      "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+    url: "https://kutamukti.id/",
+    siteName: "Web Resmi Desa Kuatmukti",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Resmi Desa Kuatmukti",
+    description:
+      "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+  },
 };
 
 export default function RootLayout({
