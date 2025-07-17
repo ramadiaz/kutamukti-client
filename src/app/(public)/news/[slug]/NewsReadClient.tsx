@@ -48,9 +48,9 @@ export default function NewsReadClient({ slug }: { slug: string }) {
                         },
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": `https://kutamukti.com/news/${newsData.slug}`
+                            "@id": `https://kutamukti.id/news/${newsData.slug}`
                         },
-                        "image": newsData.image_url || "https://kutamukti.com/default-og-image.jpg"
+                        "image": newsData.thumbnail_url || "https://kutamukti.id/default-og-image.jpg"
                     })
                 }}
             />

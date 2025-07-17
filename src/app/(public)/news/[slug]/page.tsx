@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import NewsReadClient from "./NewsReadClient";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API || "https://api.kutamukti.com"}/news/${params.slug}`);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API || "https://api.kutamukti.id/api"}/news/${params.slug}`);
   if (!res.ok) return { title: "Berita Desa Kutamukti" };
   const data = await res.json();
   const news = data.body;
@@ -13,17 +14,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: news?.title,
       description: news?.raw_text?.slice(0, 160),
       type: "article",
-      url: `https://kutamukti.com/news/${params.slug}`,
-      images: [news?.image_url || "https://kutamukti.com/default-og-image.jpg"],
+      url: `https://kutamukti.id/news/${params.slug}`,
+      images: [news?.image_url || "https://kutamukti.id/default-og-image.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: news?.title,
       description: news?.raw_text?.slice(0, 160),
-      images: [news?.image_url || "https://kutamukti.com/default-og-image.jpg"],
+      images: [news?.image_url || "https://kutamukti.id/default-og-image.jpg"],
     },
     alternates: {
-      canonical: `https://kutamukti.com/news/${params.slug}`,
+      canonical: `https://kutamukti.id/news/${params.slug}`,
     },
     robots: {
       index: true,
@@ -38,6 +39,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function NewsReadPage({ params }: { params: { slug: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function NewsReadPage({ params }: any) {
   return <NewsReadClient slug={params.slug} />;
 }
