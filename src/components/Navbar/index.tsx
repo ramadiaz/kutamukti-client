@@ -53,9 +53,21 @@ const flattenRoutes = (): SearchRoute[] => {
     ...serviceDesa,
     ...productDesa,
     ...galleryDesa,
-    { title: "Berita", href: "/news", description: "Kumpulan berita Desa Kutamukti" },
-    { title: "Peta Interaktif Desa", href: "/maps", description: "Peta digital Desa Kutamukti" },
-    { title: "Hubungi Kami", href: "mailto:kutamukti.pemdes.karawangkab@gmail.com", description: "Kontak Pemerintah Desa Kutamukti" },
+    {
+      title: "Berita",
+      href: "/news",
+      description: "Kumpulan berita Desa Kutamukti",
+    },
+    {
+      title: "Peta Interaktif Desa",
+      href: "/maps",
+      description: "Peta digital Desa Kutamukti",
+    },
+    {
+      title: "Hubungi Kami",
+      href: "mailto:kutamukti.pemdes.karawangkab@gmail.com",
+      description: "Kontak Pemerintah Desa Kutamukti",
+    },
   ];
   return all.map((item) => ({ ...item, type: "route" as const }));
 };
@@ -67,13 +79,13 @@ const Navbar = () => {
   const [news, setNews] = useState<SearchNews[]>([]);
   const [loadingNews, setLoadingNews] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   useEffect(() => {
-    if(mobileMenuOpen) {
-      setMobileMenuOpen(false)
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
     }
-  }, [pathname])
+  }, [pathname]);
 
   // Fetch news on mount
   useEffect(() => {
@@ -83,15 +95,17 @@ const Navbar = () => {
         const res = await fetch(`${ENV.BASE_API}/news/getall`);
         const data = await res.json();
         setNews(
-          (data.body || []).map((item: News): SearchNews => ({
-            title: item.title,
-            href: `/news/${item.slug}`,
-            description: item.raw_text,
-            type: "news",
-          }))
+          (data.body || []).map(
+            (item: News): SearchNews => ({
+              title: item.title,
+              href: `/news/${item.slug}`,
+              description: item.raw_text,
+              type: "news",
+            })
+          )
         );
       } catch (e) {
-        console.error(e)
+        console.error(e);
         setNews([]);
       } finally {
         setLoadingNews(false);
@@ -143,20 +157,24 @@ const Navbar = () => {
         <div className="max-w-6xl px-2 mx-auto flex flex-col md:flex-row gap-2 sm:gap-4 md:gap-8 justify-between items-center">
           <div className="flex flex-row gap-2 sm:gap-4 items-center justify-between w-full md:w-auto">
             <div className="flex flex-row gap-2 items-center">
-              <Image
-                alt="logo"
-                height={50}
-                width={undefined}
-                src={"/logos/pemda-karawang.png"}
-                className="h-[50px] w-auto object-contain"
-              />
-              <Image
-                alt="logo"
-                height={50}
-                width={undefined}
-                src={"/logos/jabar.png"}
-                className="h-[50px] w-auto object-contain"
-              />
+              <Link href={`/`} className="">
+                <Image
+                  alt="logo"
+                  height={50}
+                  width={undefined}
+                  src={"/logos/pemda-karawang.png"}
+                  className="h-[50px] w-auto object-contain"
+                />
+              </Link>
+              <Link href={`https://karawangkab.go.id`} target="_blank" className="">
+                <Image
+                  alt="logo"
+                  height={50}
+                  width={undefined}
+                  src={"/logos/jabar.png"}
+                  className="h-[50px] w-auto object-contain"
+                />
+              </Link>
               <Link href={`/created-by`} className="">
                 <Image
                   alt="logo"
@@ -190,7 +208,10 @@ const Navbar = () => {
             </button>
           </div>
           {/* Search bar: full width on mobile */}
-          <div className="w-full md:flex-grow mt-4 md:mt-0 relative" ref={dropdownRef}>
+          <div
+            className="w-full md:flex-grow mt-4 md:mt-0 relative"
+            ref={dropdownRef}
+          >
             <Input
               placeholder="Cari Berita dan Layanan Kutamukti Disini"
               type="search"
@@ -206,11 +227,13 @@ const Navbar = () => {
               onFocus={() => setShowDropdown(true)}
               autoComplete="off"
             />
-            {showDropdown && (search.length > 0) && (
+            {showDropdown && search.length > 0 && (
               <div className="absolute left-0 right-0 mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
                 {filteredRoutes.length > 0 && (
                   <div>
-                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">Menu Navigasi</div>
+                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">
+                      Menu Navigasi
+                    </div>
                     {filteredRoutes.map((item, idx) => (
                       <Link
                         key={item.href + idx}
@@ -219,14 +242,18 @@ const Navbar = () => {
                         onClick={() => setShowDropdown(false)}
                       >
                         <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500 line-clamp-1">{item.description}</div>
+                        <div className="text-xs text-gray-500 line-clamp-1">
+                          {item.description}
+                        </div>
                       </Link>
                     ))}
                   </div>
                 )}
                 {filteredNews.length > 0 && (
                   <div>
-                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">Berita</div>
+                    <div className="px-4 pt-2 pb-1 text-xs font-semibold text-emerald-700">
+                      Berita
+                    </div>
                     {filteredNews.map((item, idx) => (
                       <Link
                         key={item.href + idx}
@@ -235,16 +262,24 @@ const Navbar = () => {
                         onClick={() => setShowDropdown(false)}
                       >
                         <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500 line-clamp-1">{item.description}</div>
+                        <div className="text-xs text-gray-500 line-clamp-1">
+                          {item.description}
+                        </div>
                       </Link>
                     ))}
                   </div>
                 )}
-                {filteredRoutes.length === 0 && filteredNews.length === 0 && !loadingNews && (
-                  <div className="px-4 py-4 text-center text-gray-400 text-sm">Tidak ada hasil ditemukan.</div>
-                )}
+                {filteredRoutes.length === 0 &&
+                  filteredNews.length === 0 &&
+                  !loadingNews && (
+                    <div className="px-4 py-4 text-center text-gray-400 text-sm">
+                      Tidak ada hasil ditemukan.
+                    </div>
+                  )}
                 {loadingNews && (
-                  <div className="px-4 py-4 text-center text-gray-400 text-sm">Memuat berita...</div>
+                  <div className="px-4 py-4 text-center text-gray-400 text-sm">
+                    Memuat berita...
+                  </div>
                 )}
               </div>
             )}
