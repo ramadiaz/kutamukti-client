@@ -48,8 +48,12 @@ const MapRender = () => {
         fetchData()
     }, [])
 
+    useEffect(() => {
+        console.log({umkm})
+    }, [umkm])
+
     return (
-        <MapContainer center={position} zoom={40} scrollWheelZoom={false} className='h-[500px]'>
+        <MapContainer center={position} zoom={17} scrollWheelZoom={false} className='h-[500px]'>
             <TileLayer
                 className="z-10"
                 attribution=''
@@ -70,7 +74,7 @@ const MapRender = () => {
             {
                 umkm?.map((item, i) => {
                     return (
-                        <Marker key={i} position={[item.langitude, item.latitude]} icon={UMKMMarker} >
+                        <Marker key={i} position={[item.latitude, item.langitude]} icon={UMKMMarker} >
                             <Popup>
                                 <div className="w-[270px]">
                                     <p className="font-semibold uppercase text-medium">
