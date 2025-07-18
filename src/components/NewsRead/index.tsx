@@ -41,15 +41,16 @@ const NewsRead = ({ data }: { data: News }) => {
                 </p>
             </div>
             <div>
+                <div className='aspect-video object-cover'>
                 <Image
                     src={data.thumbnail_url}
                     width="100%"
-                    height={500}
                     radius='sm'
                     alt={data.title}
                     className='object-cover'
                     referrerPolicy='no-referrer'
-                />
+                    />
+                    </div>
                 <p className={`italic text-center`}>
                     {data.title}
                 </p>
