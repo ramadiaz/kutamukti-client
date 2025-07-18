@@ -83,12 +83,6 @@ export const serviceDesa: { title: string; href: string; description: string }[]
     href: "/service/complaint",
     description: "Halaman ini menyediakan fasilitas bagi masyarakat Desa Kutamukti untuk menyampaikan laporan, keluhan, atau aspirasi terkait pelayanan publik, infrastruktur, lingkungan, dan isu-isu lainnya di lingkungan desa. Melalui sistem pengaduan ini, pemerintah desa berkomitmen untuk mendengarkan suara warga dan menindaklanjuti setiap laporan secara transparan dan responsif. Partisipasi aktif masyarakat sangat penting dalam mewujudkan tata kelola desa yang baik, terbuka, dan bertanggung jawab.",
   },
-  {
-    title: "Agenda Desa",
-    href: "/service/schedule",
-    description:
-      "Halaman ini memuat berbagai agenda dan kegiatan resmi yang akan diselenggarakan oleh Pemerintah Desa Kutamukti, seperti musyawarah warga, kegiatan gotong royong, pelatihan masyarakat, perayaan hari besar, hingga program pembangunan desa. Informasi ini disajikan agar masyarakat dapat mengikuti dan berpartisipasi aktif dalam setiap kegiatan yang berlangsung. Dengan keterbukaan agenda, diharapkan tercipta komunikasi yang lebih baik antara pemerintah desa dan warganya.",
-  },
 ];
 
 export const productDesa: { title: string; href: string; description: string }[] = [
@@ -96,12 +90,6 @@ export const productDesa: { title: string; href: string; description: string }[]
     title: "Katalog Produk",
     href: "/product/catalog",
     description: "Halaman ini menampilkan katalog produk unggulan dari pelaku UMKM Desa Kutamukti, mulai dari hasil pertanian, kerajinan tangan, kuliner lokal, hingga produk kreatif lainnya. Setiap produk merupakan cerminan potensi dan kreativitas masyarakat desa yang terus berkembang. Dengan adanya katalog ini, diharapkan dapat memperluas jangkauan pemasaran, meningkatkan daya saing produk lokal, serta mendorong pertumbuhan ekonomi desa yang berkelanjutan.",
-  },
-  {
-    title: "Daftar UMKM",
-    href: "/product/store",
-    description:
-      "Halaman ini menyajikan daftar lengkap pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) yang aktif di Desa Kutamukti. Informasi mencakup nama usaha, jenis produk atau layanan, alamat, dan kontak yang dapat dihubungi. Tujuan dari halaman ini adalah untuk mengenalkan potensi ekonomi lokal sekaligus mempermudah kolaborasi, pemasaran, dan dukungan dari berbagai pihak. Dengan mendukung UMKM desa, kita turut mendorong kemandirian dan kesejahteraan masyarakat secara menyeluruh.",
   },
 ];
 
