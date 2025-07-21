@@ -14,8 +14,7 @@ const ApparatusChart = () => {
           Bagan Pengurus Desa Kutamukti
         </h1>
         <p className="opacity-90 text-sm">
-          Berikut adalah bagan pengurus Desa Kutamukti yang menjabat mulai tahun
-          2024 sampai sekarang:
+          Berikut adalah bagan pengurus Desa Kutamukti yang menjabat pada tahun 2025:
         </p>
       </div>
       <div className="w-full flex items-center justify-center">
