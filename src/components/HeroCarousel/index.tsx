@@ -2,7 +2,7 @@
 
 import { ENV } from "@/lib/environment";
 import { News } from "@/types/news";
-import { Image, ScrollShadow } from "@heroui/react";
+import { Image, ScrollShadow, Skeleton } from "@heroui/react";
 import { ArrowCircleRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -118,26 +118,63 @@ const ImageOverlay = ({
         </div>
         <div className="border-t pt-4">
           <ScrollShadow className="w-full pb-4" orientation="horizontal">
-            <div className="w-max flex flex-row gap-2 sm:gap-4">
-              {newsData.map((v, i) => {
-                return (
-                  <div key={i} className="grow-0 flex flex-row gap-2 w-sm">
-                    <div className="basis-2/5 w-[200px]">
-                      <Image
-                        src={v.thumbnail_url}
-                        width={450}
-                        alt="banner"
-                        className="aspect-video object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <p className="basis-3/5 text-sm line-clamp-4">{v.title}</p>
-                  </div>
-                );
-              })}
-            </div>
+            {newsData.length > 0 ? (
+              <div className="w-max flex flex-row gap-2 sm:gap-4">
+                {newsData.map((v, i) => {
+                  return <NewsCard key={i} data={v} />;
+                })}
+              </div>
+            ) : (
+              <div className="w-max flex flex-row gap-2 sm:gap-4">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <NewsSkeleton key={i} />
+                  ))}
+              </div>
+            )}
           </ScrollShadow>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const NewsCard = ({ data }: { data: News }) => {
+  return (
+    <div className="grow-0 flex flex-row gap-2 w-sm">
+      <div className="basis-2/5 w-[200px]">
+        <Image
+          src={data.thumbnail_url}
+          width={450}
+          alt="banner"
+          className="aspect-video object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      <p className="basis-3/5 text-sm line-clamp-4">{data.title}</p>
+    </div>
+  );
+};
+
+const NewsSkeleton = () => {
+  return (
+    <div className="grow-0 flex flex-row gap-2 w-sm">
+      <div className="basis-2/5 w-[200px]">
+        <Skeleton className="rounded-lg">
+          <div className="h-[80px] rounded-lg bg-default-300" />
+        </Skeleton>
+      </div>
+      <div className="basis-3/5 space-y-2">
+        <Skeleton className="rounded-lg w-full">
+          <div className="h-[16px] rounded-lg bg-default-300" />
+        </Skeleton>
+        <Skeleton className="rounded-lg w-1/2">
+          <div className="h-[16px] rounded-lg bg-default-300" />
+        </Skeleton>
+        <Skeleton className="rounded-lg w-3/4">
+          <div className="h-[16px] rounded-lg bg-default-300" />
+        </Skeleton>
       </div>
     </div>
   );
