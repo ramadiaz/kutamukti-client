@@ -32,7 +32,7 @@ const NewsList = () => {
 
     return (
         <div className='max-w-6xl px-2 mx-auto'>
-            <div className='flex flex-grow justify-center items-center gap-2 sm:gap-4'>
+            <div className='flex flex-wrap w-full justify-center gap-2 sm:gap-4'>
                 {newsData.map((item, i) => {
                     return (
                         <NewsCard key={i} data={item} />
