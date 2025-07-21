@@ -10,7 +10,6 @@ import {
 import Link from "next/link";
 import { ReactNode } from "react";
 import NetworkBackground from "../backgrounds/network-background";
-import useIsMobile from "@/hooks/useIsMobile";
 
 type NavType = {
   icon: ReactNode;
@@ -41,7 +40,7 @@ const NavData: NavType[] = [
 ];
 
 const MapOverview = () => {
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
 
   return (
     <div className="h-[900px] sm:h-[700px] relative">
@@ -49,7 +48,6 @@ const MapOverview = () => {
       <Image
         src={`/images/background-map.png`}
         width="100%"
-        height={isMobile ? 900 : 700}
         alt="map"
         radius="none"
         className="object-cover object-[50%_20%] h-[900px] sm:h-[700px] brightness-55"
