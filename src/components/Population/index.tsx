@@ -26,7 +26,7 @@ const Population = () => {
           />
         </div>
       </div>
-      <div className="mt-8 space-y-4">
+      <div className="mt-8 space-y-2 sm:space-y-4">
         <h1 className="font-semibold text-xl mb-6">
           Jumlah Penduduk dan Kepala Keluarga
         </h1>

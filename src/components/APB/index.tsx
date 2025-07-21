@@ -23,13 +23,13 @@ const APB = () => {
             berbagai program dan kegiatan pembangunan di desa sepanjang tahun
             2024.
           </p>
-          <div className="bg-gradient-to-br from-neutral-200 p-4 rounded-xl space-y-4 mt-4">
+          <div className="bg-gradient-to-br from-neutral-200 p-4 rounded-xl space-y-4 mt-2 sm:mt-4">
             <p>Pendapatan Desa</p>
             <p className="text-center text-2xl font-semibold mb-4">
               Rp 2.001.963.800,00
             </p>
           </div>
-          <div className="bg-gradient-to-br from-neutral-200 p-4 rounded-xl space-y-4 mt-4">
+          <div className="bg-gradient-to-br from-neutral-200 p-4 rounded-xl space-y-4 mt-2 sm:mt-4">
             <p>Belanja Desa</p>
             <p className="text-center text-2xl font-semibold mb-4">
               Rp 2.002.313.352,00
