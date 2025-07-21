@@ -142,7 +142,10 @@ const ImageOverlay = ({
 
 const NewsCard = ({ data }: { data: News }) => {
   return (
-    <div className="grow-0 flex flex-row gap-2 w-sm">
+    <Link
+      href={`/news/${data.slug}`}
+      className="grow-0 flex flex-row gap-2 w-sm"
+    >
       <div className="basis-2/5 w-[200px]">
         <Image
           src={data.thumbnail_url}
@@ -153,7 +156,7 @@ const NewsCard = ({ data }: { data: News }) => {
         />
       </div>
       <p className="basis-3/5 text-sm line-clamp-4">{data.title}</p>
-    </div>
+    </Link>
   );
 };
 
