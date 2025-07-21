@@ -21,9 +21,9 @@ const HomePage = () => {
       <div className="h-18" />
       <MapOverview />
       <div className="h-24" />
-      <VideoCards />
-      <div className="h-24" />
       <NewsCards />
+      <div className="h-24" />
+      <VideoCards />
       <div className="h-24" />
     </div>
   );
