@@ -16,9 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Web Resmi Desa Kuatmukti",
+  title: "Kutamukti - Web Resmi Desa Kutamukti Karawang",
   description:
-    "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+    "Kutamukti adalah desa di Kecamatan Kutawaluya, Karawang. Temukan informasi resmi, berita, dan layanan Desa Kutamukti di sini.",
+  keywords: [
+    "kutamukti",
+    "desa kutamukti",
+    "kutawaluya",
+    "karawang",
+    "web resmi kutamukti",
+    "informasi desa kutamukti",
+    "pemerintahan desa kutamukti"
+  ],
   robots: {
     index: true,
     follow: true,
@@ -34,19 +43,19 @@ export const metadata: Metadata = {
     canonical: "https://kutamukti.id/",
   },
   openGraph: {
-    title: "Web Resmi Desa Kuatmukti",
+    title: "Kutamukti - Web Resmi Desa Kutamukti Karawang",
     description:
-      "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+      "Kutamukti adalah desa di Kecamatan Kutawaluya, Karawang. Temukan informasi resmi, berita, dan layanan Desa Kutamukti di sini.",
     url: "https://kutamukti.id/",
-    siteName: "Web Resmi Desa Kuatmukti",
+    siteName: "Web Resmi Desa Kutamukti",
     locale: "id_ID",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Resmi Desa Kuatmukti",
+    title: "Kutamukti - Web Resmi Desa Kutamukti Karawang",
     description:
-      "Desa Kutamukti Merupakan salah satu desa dari dua belas desa yang ada di Kecamatan Kutawaluya Kabupaten Karawang",
+      "Kutamukti adalah desa di Kecamatan Kutawaluya, Karawang. Temukan informasi resmi, berita, dan layanan Desa Kutamukti di sini.",
   },
 };
 
@@ -56,7 +65,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "GovernmentOrganization",
+              "name": "Desa Kutamukti",
+              "url": "https://kutamukti.id/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kutamukti",
+                "addressRegion": "Karawang",
+                "addressCountry": "ID"
+              },
+              "description": "Web resmi Desa Kutamukti, Kecamatan Kutawaluya, Karawang. Informasi, berita, dan layanan desa."
+            })
+          }}
+        />
+      </head>
       <body
         className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
