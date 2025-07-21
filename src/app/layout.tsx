@@ -87,7 +87,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen scroll-smooth`}
       >
         <MainProviders>{children}</MainProviders>
         <Analytics/>

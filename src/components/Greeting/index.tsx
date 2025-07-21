@@ -26,7 +26,8 @@ const Greeting = () => {
   return (
     <div
       ref={ref}
-      className={`max-w-6xl mx-auto bg-gradient-to-br to-neutral-200 p-8 rounded-xl transition-all duration-1000 ease-out relative overflow-hidden
+      id="greeting"
+      className={`max-w-6xl mx-auto bg-gradient-to-br to-neutral-200 p-8 rounded-xl transition-all duration-1000 ease-out relative overflow-hidden scroll-smooth
         ${inView ? "opacity-100 translate-y-0 shimmer-glow" : "opacity-0 translate-y-8"}`}
     >
       <style jsx>{`

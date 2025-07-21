@@ -12,6 +12,7 @@ type HeroCarouselData = {
   image: string;
   title: string;
   label: string;
+  link: string;
 };
 
 const bannerData: HeroCarouselData[] = [
@@ -19,16 +20,19 @@ const bannerData: HeroCarouselData[] = [
     image: "/images/hero-1.JPG",
     title: "Selamat Datang di Website Resmi Pemerintahan Desa Kutamukti",
     label: "Sambutan",
+    link: "#greeting",
   },
   {
     image: "/images/hero-2.JPG",
     title: "Lihat Daftar Fasilitas dan Infrastruktur Desa Kutamukti",
     label: "Fasilitas",
+    link: "/datas/facilities-infrastructure",
   },
   {
-    image: "/images/hero-3.JPG",
-    title: "Selamat Datang di Kutamukti",
-    label: "Sambutan",
+    image: "/images/hero-3.jpg",
+    title: "Buat Laporan Pengaduan Secara Aman di Website Resmi Desa Kutamukti",
+    label: "Laporan",
+    link: "/service/complaint",
   },
 ];
 
@@ -95,7 +99,10 @@ const ImageOverlay = ({
               {item.label}
             </div>
             <h1 className="text-4xl font-semibold">{item.title}</h1>
-            <Link href={`#`} className="flex flex-row gap-2 items-center mt-5">
+            <Link
+              href={item.link}
+              className="flex flex-row gap-2 items-center mt-5"
+            >
               <ArrowCircleRightIcon size={32} />
               <p className="">Pelajari Lebih Lanjut</p>
             </Link>
