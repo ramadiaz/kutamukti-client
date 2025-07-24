@@ -83,9 +83,17 @@ const MapRender = () => {
                                     <p className="text-sm">
                                         {item.location}
                                     </p>
-                                    <div className="w-full flex justify-end">
-                                        <Link href={`/umkm/${item.uuid}`} target="_blank" className="text-right w-full">
+                                    <div className="w-full flex flex-col gap-2 justify-end items-end">
+                                        {/* <Link href={`/umkm/${item.uuid}`} target="_blank" className="text-right w-full">
                                             Lihat Produk
+                                        </Link> */}
+                                        <Link
+                                            href={`https://www.google.com/maps?q=${item.latitude},${item.langitude}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 underline text-right w-full"
+                                        >
+                                            Lihat di Google Maps
                                         </Link>
                                     </div>
                                 </div>
