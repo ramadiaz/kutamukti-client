@@ -205,8 +205,8 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink href="mailto:kutamukti.pemdes.karawangkab@gmail.com" target="_blank" className="font-normal uppercase">
-            Hubungi Kami
+          <NavigationMenuLink href="/bumdes" className="font-normal uppercase">
+            Bumdes
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -283,8 +283,8 @@ export function MobileNavMenu() {
       <Link href="/maps" className="py-2 text-base font-semibold text-emerald-700">
         Peta Interaktif Desa
       </Link>
-      <Link href="mailto:kutamukti.pemdes.karawangkab@gmail.com" target="_blank" className="py-2 text-base font-semibold text-emerald-700">
-        Hubungi Kami
+      <Link href="/bumdes" className="py-2 text-base font-semibold text-emerald-700">
+        Bumdes
       </Link>
     </div>
   );

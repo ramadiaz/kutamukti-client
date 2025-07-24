@@ -64,6 +64,11 @@ const flattenRoutes = (): SearchRoute[] => {
       description: "Peta digital Desa Kutamukti",
     },
     {
+      title: "BUMDes MKB",
+      href: "/bumdes",
+      description: "Badan Usaha Milik Desa",
+    },
+    {
       title: "Hubungi Kami",
       href: "mailto:kutamukti.pemdes.karawangkab@gmail.com",
       description: "Kontak Pemerintah Desa Kutamukti",
