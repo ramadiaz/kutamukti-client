@@ -1,4 +1,5 @@
-import VisiMisi from "@/components/Bumdes/VisiMisi";
+import Contact from "@/components/BUMDes/Contact";
+import VisiMisi from "@/components/BUMDes/VisiMisi";
 import PageHeader from "@/components/PageHeader";
 
 const BumdesPage = () => {
@@ -11,6 +12,8 @@ const BumdesPage = () => {
       />
       <div className="h-16" />
       <VisiMisi />
+      <div className="h-16" />
+      <Contact />
     </div>
   );
 };
