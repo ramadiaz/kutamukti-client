@@ -31,7 +31,7 @@ const Activities = () => {
 const ActivityCard = ({ name, image }: { name: string; image: string }) => {
   return (
     <div
-      className="flex flex-col items-center justify-start w-[160px] sm:w-[250px] space-y-2 shadow-xl p-4 rounded-xl hover:scale-105 transition-all duration-400 bg-gradient-to-br from-emerald-100 to-20%"
+      className="flex flex-col items-center justify-start w-[150px] sm:w-[250px] space-y-2 shadow-xl p-4 rounded-xl hover:scale-105 transition-all duration-400 bg-gradient-to-br from-emerald-100 to-20%"
     >
       <div>
         <Image
