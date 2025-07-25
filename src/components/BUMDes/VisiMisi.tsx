@@ -1,8 +1,8 @@
 const VisiMisi = () => {
   return (
-    <div className="max-w-6xl px-2 mx-auto py-4 space-y-4">
+    <div className="max-w-6xl px-4 mx-auto py-4 space-y-4">
       <h1 className="text-2xl font-semibold">Visi & Misi</h1>
-      <div className="p-8 rounded-lg bg-gradient-to-br from-neutral-200 to-white space-y-2">
+      <div className="p-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 text-white space-y-2">
         <h2 className="text-center text-xl font-semibold">Visi</h2>
         <ul>
           <li className="text-center">
@@ -11,7 +11,7 @@ const VisiMisi = () => {
           <li className="text-center">- MEMBANGUN KEWIRAUSAHAAN MANDIRI</li>
         </ul>
       </div>
-      <div className="p-8 rounded-lg bg-gradient-to-br from-neutral-200 to-white space-y-2">
+      <div className="p-8 rounded-lg bg-gradient-to-br from-emerald-200 to-emerald-50 space-y-2">
         <h2 className="text-center text-xl font-semibold">Misi</h2>
         <p className="text-center">
           Misi adalah rumusan umum mengenai upaya-upaya yang akan dilaksanakan

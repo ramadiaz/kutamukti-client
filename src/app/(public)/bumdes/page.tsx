@@ -1,3 +1,5 @@
+import Activities from "@/components/BUMDes/Activities";
+import ApparatusList from "@/components/BUMDes/ApparatusList";
 import Contact from "@/components/BUMDes/Contact";
 import VisiMisi from "@/components/BUMDes/VisiMisi";
 import PageHeader from "@/components/PageHeader";
@@ -12,8 +14,12 @@ const BumdesPage = () => {
       />
       <div className="h-16" />
       <VisiMisi />
-      <div className="h-16" />
+      <div className="h-12" />
       <Contact />
+      <div className="h-12" />
+      <Activities />
+      <div className="h-16" />
+      <ApparatusList />
     </div>
   );
 };
