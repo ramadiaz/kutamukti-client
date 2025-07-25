@@ -37,7 +37,7 @@ const ContactCard = ({
   href: string;
 }) => {
   return (
-    <Link href={href} target="_blank" className="flex flex-col items-center justify-start w-[200px] sm:w-[250px] space-y-2 shadow-xl p-4 rounded-xl hover:scale-105 transition-all duration-400 bg-gradient-to-br from-emerald-100 to-20%">
+    <Link href={href} target="_blank" className="flex flex-col items-center justify-start w-[160px] sm:w-[250px] space-y-2 shadow-xl p-4 rounded-xl hover:scale-105 transition-all duration-400 bg-gradient-to-br from-emerald-100 to-20%">
       <div>
         <Image
           src={image}
